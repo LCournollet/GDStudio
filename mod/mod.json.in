@@ -1,0 +1,35 @@
+{
+    "geode": "@GDDS_GEODE_VERSION@",
+    "gd": {
+        "win": "@GDDS_GD_VERSION@"
+    },
+    "id": "toyger.gd-decoration-studio",
+    "name": "GD Decoration Studio",
+    "version": "v0.1.0",
+    "developer": "Toyger",
+    "description": "Procedural, layer-based decoration of existing gameplay, directly in the editor.",
+    "tags": ["editor", "utility", "enhancement"],
+    "settings": {
+        "open-studio": {
+            "type": "keybind",
+            "name": "Open Decoration Studio",
+            "description": "Opens or closes the Decoration Studio panel in the editor.",
+            "default": "Alt+D",
+            "category": "editor"
+        },
+        "verify-catalog": {
+            "type": "bool",
+            "name": "Verify decoration objects at startup",
+            "description": "Creates each catalog object once and disables any id that does not behave as a pure decoration in this game version.",
+            "default": true
+        },
+        "max-objects": {
+            "type": "int",
+            "name": "Max objects per operation",
+            "description": "Safety limit on the number of objects one generation may create.",
+            "default": 25000,
+            "min": 500,
+            "max": 200000
+        }
+    }
+}

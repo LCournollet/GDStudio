@@ -1,0 +1,5 @@
+add_executable(gdds-cli main.cpp)
+target_link_libraries(gdds-cli PRIVATE gdds_core)
+if (MSVC)
+    target_compile_options(gdds-cli PRIVATE /utf-8 /W3)
+endif()

@@ -1,0 +1,7 @@
+build*/
+out/
+mod/mod.json
+__pycache__/
+*.pyc
+.vs/
+.vscode/

@@ -1,0 +1,6751 @@
+{
+ "_meta": {
+  "generated_from": "GeometryDash.exe (Steam, Windows x64, 13,178,880 bytes, PE build timestamp 2026-10-17 02:12 UTC; no version string in binary) - user reports GD 2.2091 + Resources/*-uhd.plist/png",
+  "selection": "hand-curated from objects whose final exe-derived gd_type is 7 (Decoration), verified visually on rendered contact sheets; categories assigned by eye + frame name",
+  "size_units": "uhd frame sourceSize / 4 (verified: square_01_001.png = 120x120 px -> 30x30 units). visible_size_units = alpha>32 bounding box / 4",
+  "colorable": "true if sprite is grey/white (mean HSV saturation <= 0.15 and mean value >= 0.15) so the colour channel tint shows; mean_value tells how bright the tint renders (1.0 = exact channel colour)",
+  "default_base_color": "channel id the exe assigns by default (1=colour 1, 1004=Obj, 1005=P1, 1006=P2, 1007=LBG, 1010=black, 1011=white)",
+  "color_child_frame/glow_frame": "present when a <frame>_color_001.png / <frame>_glow_001.png exists in the sheets (GD naming convention for detail-colour child and glow child; convention-based)",
+  "count": 289
+ },
+ "candidates": [
+  {
+   "id": 2973,
+   "frame": "gdh_03_1_o1_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.635,
+    "coverage": 0.405
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2974,
+   "frame": "gdh_03_1_o2_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.562,
+    "coverage": 0.512
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2975,
+   "frame": "gdh_03_1_o3_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.995,
+    "coverage": 0.188
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2976,
+   "frame": "gdh_03_1_o4_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    29.5,
+    29.5
+   ],
+   "visible_size_units": [
+    29.5,
+    29.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.666,
+    "coverage": 0.497
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2977,
+   "frame": "gdh_03_1_o5_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    29.5,
+    29.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.641,
+    "coverage": 0.31
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2978,
+   "frame": "gdh_03_1_o6_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    29.5,
+    29.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.925,
+    "coverage": 0.166
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2979,
+   "frame": "gdh_03_1_o7_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    29.5,
+    29.5
+   ],
+   "visible_size_units": [
+    29.0,
+    29.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.644,
+    "coverage": 0.329
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2980,
+   "frame": "gdh_03_1_o8_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    60.0,
+    30.0
+   ],
+   "visible_size_units": [
+    59.5,
+    29.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.649,
+    "coverage": 0.286
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2981,
+   "frame": "gdh_03_1_o9_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    60.0,
+    30.0
+   ],
+   "visible_size_units": [
+    59.5,
+    29.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.957,
+    "coverage": 0.147
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2982,
+   "frame": "gdh_03_1_o10_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    59.5,
+    29.5
+   ],
+   "visible_size_units": [
+    59.0,
+    29.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.657,
+    "coverage": 0.315
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2983,
+   "frame": "gdh_03_1_o1_s_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.699,
+    "coverage": 0.547
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2984,
+   "frame": "gdh_03_1_o2_s_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.638,
+    "coverage": 0.639
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2985,
+   "frame": "gdh_03_1_o3_s_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.988,
+    "coverage": 0.299
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 2986,
+   "frame": "gdh_03_1_o4_s_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    13.0,
+    13.0
+   ],
+   "visible_size_units": [
+    13.0,
+    13.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.678,
+    "coverage": 0.499
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 496,
+   "frame": "d_largeSquare_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    40.0,
+    40.0
+   ],
+   "visible_size_units": [
+    40.0,
+    40.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.989,
+    "coverage": 0.655
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 1196,
+   "frame": "block006_color_06_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.75
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1193,
+   "frame": "block006_color_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "outline",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.625
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1753,
+   "frame": "gridLine01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    1.0
+   ],
+   "visible_size_units": [
+    30.0,
+    1.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 1754,
+   "frame": "gridLine02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    1.0
+   ],
+   "visible_size_units": [
+    26.25,
+    1.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.567,
+    "coverage": 0.875
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 1757,
+   "frame": "gridLine03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    15.0,
+    1.0
+   ],
+   "visible_size_units": [
+    15.0,
+    1.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 1756,
+   "frame": "d_link_b_06_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    4.0,
+    30.0
+   ],
+   "visible_size_units": [
+    4.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.816,
+    "coverage": 1.0
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 1004,
+   "frame": "d_link_d_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    2.0
+   ],
+   "visible_size_units": [
+    30.0,
+    2.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.995,
+    "coverage": 0.842
+   },
+   "default_base_color": 1005,
+   "class": "GameObject",
+   "color_child_frame": "d_link_d_04_color_001.png"
+  },
+  {
+   "id": 1005,
+   "frame": "d_link_d_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    2.0,
+    30.0
+   ],
+   "visible_size_units": [
+    2.0,
+    12.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.99,
+    "coverage": 0.423
+   },
+   "default_base_color": 1005,
+   "class": "GameObject",
+   "color_child_frame": "d_link_d_05_color_001.png"
+  },
+  {
+   "id": 1003,
+   "frame": "d_link_d_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.993,
+    "coverage": 0.084
+   },
+   "default_base_color": 1005,
+   "class": "GameObject",
+   "color_child_frame": "d_link_d_03_color_001.png"
+  },
+  {
+   "id": 1191,
+   "frame": "block006_color_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    7.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.25
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1197,
+   "frame": "block006_color_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    7.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.25
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 506,
+   "frame": "persp_outline_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    10.0
+   ],
+   "visible_size_units": [
+    30.0,
+    10.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.935,
+    "coverage": 0.175
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 507,
+   "frame": "persp_outline_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    10.0
+   ],
+   "visible_size_units": [
+    30.0,
+    1.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.15
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 508,
+   "frame": "persp_outline_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    15.0,
+    10.0
+   ],
+   "visible_size_units": [
+    15.0,
+    1.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.15
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 513,
+   "frame": "persp_outline_08_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    70.0,
+    40.0
+   ],
+   "visible_size_units": [
+    61.25,
+    31.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.943,
+    "coverage": 0.038
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 514,
+   "frame": "persp_outline_09_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    40.0,
+    40.0
+   ],
+   "visible_size_units": [
+    31.0,
+    31.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.847,
+    "coverage": 0.047
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1758,
+   "frame": "blockOutline_14_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.908,
+    "coverage": 0.072
+   },
+   "default_base_color": 1,
+   "class": "GameObject",
+   "glow_frame": "blockOutline_14_glow_001.png"
+  },
+  {
+   "id": 1759,
+   "frame": "blockOutline_15_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    60.0,
+    30.0
+   ],
+   "visible_size_units": [
+    59.75,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.934,
+    "coverage": 0.057
+   },
+   "default_base_color": 1,
+   "class": "GameObject",
+   "glow_frame": "blockOutline_15_glow_001.png"
+  },
+  {
+   "id": 1621,
+   "frame": "block013_edge_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    10.0,
+    30.0
+   ],
+   "visible_size_units": [
+    8.5,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.604,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.982,
+    "coverage": 0.67
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_edge_01_color_001.png"
+  },
+  {
+   "id": 1622,
+   "frame": "block013_edge_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    10.0,
+    30.0
+   ],
+   "visible_size_units": [
+    10.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.523,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.987,
+    "coverage": 0.692
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1623,
+   "frame": "block013_edge_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    10.0,
+    30.0
+   ],
+   "visible_size_units": [
+    8.25,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.573,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.984,
+    "coverage": 0.608
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_edge_03_color_001.png"
+  },
+  {
+   "id": 1624,
+   "frame": "block013_edge_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    10.0,
+    30.0
+   ],
+   "visible_size_units": [
+    9.25,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.607,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.986,
+    "coverage": 0.667
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_edge_04_color_001.png"
+  },
+  {
+   "id": 1629,
+   "frame": "block013_edge_09_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    12.0
+   ],
+   "visible_size_units": [
+    30.0,
+    12.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.676,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.989,
+    "coverage": 0.763
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_edge_09_color_001.png"
+  },
+  {
+   "id": 1630,
+   "frame": "block013_edge_10_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    12.0
+   ],
+   "visible_size_units": [
+    30.0,
+    11.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.59,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.988,
+    "coverage": 0.696
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_edge_10_color_001.png"
+  },
+  {
+   "id": 2853,
+   "frame": "gdh_02_o_02_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    2.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.793,
+    "coverage": 0.183
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 2854,
+   "frame": "gdh_02_o_03_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    5.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.593,
+    "coverage": 0.333
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 2858,
+   "frame": "gdh_02_o_07_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    2.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.937,
+    "coverage": 0.133
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 225,
+   "frame": "d_swirve_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    15.5
+   ],
+   "visible_size_units": [
+    30.0,
+    15.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.959,
+    "coverage": 0.356
+   },
+   "default_base_color": 1006,
+   "class": "GameObject"
+  },
+  {
+   "id": 226,
+   "frame": "d_swirve_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    22.75,
+    22.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.96,
+    "coverage": 0.226
+   },
+   "default_base_color": 1006,
+   "class": "GameObject"
+  },
+  {
+   "id": 500,
+   "frame": "d_swirve_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    15.5
+   ],
+   "visible_size_units": [
+    30.0,
+    15.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.948,
+    "coverage": 0.272
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 501,
+   "frame": "d_swirve_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    23.25,
+    23.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.95,
+    "coverage": 0.175
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1697,
+   "frame": "d_zag_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    14.5
+   ],
+   "visible_size_units": [
+    30.0,
+    12.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.921,
+    "coverage": 0.21
+   },
+   "default_base_color": 1006,
+   "class": "EnhancedGameObject",
+   "color_child_frame": "d_zag_01_color_001.png",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1698,
+   "frame": "d_zag_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    19.0,
+    18.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.926,
+    "coverage": 0.092
+   },
+   "default_base_color": 1006,
+   "class": "EnhancedGameObject",
+   "color_child_frame": "d_zag_02_color_001.png",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1699,
+   "frame": "d_zag_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    11.5,
+    30.0
+   ],
+   "visible_size_units": [
+    9.75,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.925,
+    "coverage": 0.143
+   },
+   "default_base_color": 1006,
+   "class": "EnhancedGameObject",
+   "color_child_frame": "d_zag_03_color_001.png",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1521,
+   "frame": "d_rotatingLine_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    6.0,
+    119.0
+   ],
+   "visible_size_units": [
+    6.0,
+    62.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.811,
+    "coverage": 0.525
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1522,
+   "frame": "d_rotatingLine_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    5.0,
+    96.0
+   ],
+   "visible_size_units": [
+    5.0,
+    50.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.809,
+    "coverage": 0.526
+   },
+   "default_base_color": 1006,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 237,
+   "frame": "d_link_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    12.5,
+    30.0
+   ],
+   "visible_size_units": [
+    12.5,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.983,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.861,
+    "coverage": 0.65
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 238,
+   "frame": "d_link_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    21.25,
+    21.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.983,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.862,
+    "coverage": 0.271
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 409,
+   "frame": "d_link_b_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    13.0,
+    30.0
+   ],
+   "visible_size_units": [
+    13.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.871,
+    "coverage": 0.337
+   },
+   "default_base_color": 1007,
+   "class": "GameObject",
+   "color_child_frame": "d_link_b_01_color_001.png"
+  },
+  {
+   "id": 410,
+   "frame": "d_link_b_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "edge_line",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    21.5,
+    21.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.871,
+    "coverage": 0.146
+   },
+   "default_base_color": 1007,
+   "class": "GameObject",
+   "color_child_frame": "d_link_b_02_color_001.png"
+  },
+  {
+   "id": 472,
+   "frame": "blockOutline_06_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    1.5,
+    1.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.003
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "blockOutline_06_glow_001.png"
+  },
+  {
+   "id": 473,
+   "frame": "blockOutline_07_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    2.25,
+    2.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.893,
+    "coverage": 0.003
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "blockOutline_07_glow_001.png"
+  },
+  {
+   "id": 474,
+   "frame": "blockOutline_08_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    3.25,
+    1.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.946,
+    "coverage": 0.003
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "blockOutline_08_glow_001.png"
+  },
+  {
+   "id": 1205,
+   "frame": "blockOutlineThick_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    3.0,
+    3.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.01
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "blockOutlineThick_04_glow_001.png"
+  },
+  {
+   "id": 1206,
+   "frame": "blockOutlineThick_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    3.0,
+    3.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.942,
+    "coverage": 0.005
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "blockOutlineThick_05_glow_001.png"
+  },
+  {
+   "id": 1223,
+   "frame": "blockOutlineThickb_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    6.0,
+    6.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.04
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "blockOutlineThickb_04_glow_001.png"
+  },
+  {
+   "id": 1224,
+   "frame": "blockOutlineThickb_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    6.0,
+    6.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.97,
+    "coverage": 0.021
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "blockOutlineThickb_05_glow_001.png"
+  },
+  {
+   "id": 1261,
+   "frame": "blockOutlineOuter1_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    33.0,
+    33.0
+   ],
+   "visible_size_units": [
+    2.0,
+    2.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.003
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "blockOutlineOuter1_01_glow_001.png"
+  },
+  {
+   "id": 1263,
+   "frame": "blockOutlineOuter2_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    36.0,
+    36.0
+   ],
+   "visible_size_units": [
+    3.5,
+    3.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.009
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "blockOutlineOuter2_01_glow_001.png"
+  },
+  {
+   "id": 1265,
+   "frame": "blockOutlineOuter3_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    42.25,
+    42.0
+   ],
+   "visible_size_units": [
+    6.75,
+    6.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.963,
+    "coverage": 0.025
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "blockOutlineOuter3_01_glow_001.png"
+  },
+  {
+   "id": 1194,
+   "frame": "block006_color_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    7.5,
+    7.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.062
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1192,
+   "frame": "block006_color_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.438
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1002,
+   "frame": "d_link_d_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.992,
+    "coverage": 0.056
+   },
+   "default_base_color": 1005,
+   "class": "GameObject",
+   "color_child_frame": "d_link_d_02_color_001.png"
+  },
+  {
+   "id": 2852,
+   "frame": "gdh_02_o_01_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.683,
+    "coverage": 0.446
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 2855,
+   "frame": "gdh_02_o_04_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.598,
+    "coverage": 0.803
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 2857,
+   "frame": "gdh_02_o_06_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.935,
+    "coverage": 0.242
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 2859,
+   "frame": "gdh_02_o_08_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.623,
+    "coverage": 0.568
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1922,
+   "frame": "edge_01_01_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    10.0,
+    10.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.853,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject",
+   "color_child_frame": "edge_01_01_color_001.png"
+  },
+  {
+   "id": 1923,
+   "frame": "edge_01_02_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    10.0,
+    10.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.768,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject",
+   "color_child_frame": "edge_01_02_color_001.png"
+  },
+  {
+   "id": 1924,
+   "frame": "edge_01_03_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    10.0,
+    10.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.938,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject",
+   "color_child_frame": "edge_01_03_color_001.png"
+  },
+  {
+   "id": 1925,
+   "frame": "edge_01_04_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    10.0,
+    10.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.935,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.995,
+    "coverage": 0.951
+   },
+   "default_base_color": 1,
+   "class": "GameObject",
+   "color_child_frame": "edge_01_04_color_001.png"
+  },
+  {
+   "id": 1926,
+   "frame": "edge_01_05_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    3.0,
+    10.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.864,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.959,
+    "coverage": 0.244
+   },
+   "default_base_color": 1,
+   "class": "GameObject",
+   "color_child_frame": "edge_01_05_color_001.png"
+  },
+  {
+   "id": 1927,
+   "frame": "edge_01_06_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    10.0,
+    10.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1928,
+   "frame": "edge_01_07_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    10.0,
+    10.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.774,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.994,
+    "coverage": 0.953
+   },
+   "default_base_color": 1,
+   "class": "GameObject",
+   "color_child_frame": "edge_01_07_color_001.png"
+  },
+  {
+   "id": 1637,
+   "frame": "block013_edge_c_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    4.0,
+    5.0
+   ],
+   "visible_size_units": [
+    4.0,
+    5.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.485,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.946,
+    "coverage": 0.894
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_edge_c_01_color_001.png"
+  },
+  {
+   "id": 1638,
+   "frame": "block013_edge_c_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    5.0,
+    11.5
+   ],
+   "visible_size_units": [
+    5.0,
+    11.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.481,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.973,
+    "coverage": 0.798
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_edge_c_02_color_001.png"
+  },
+  {
+   "id": 1639,
+   "frame": "block013_edge_c_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    7.0,
+    7.5
+   ],
+   "visible_size_units": [
+    7.0,
+    7.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.512,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.956,
+    "coverage": 0.77
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1640,
+   "frame": "block013_edge_c_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    3.5,
+    6.0
+   ],
+   "visible_size_units": [
+    3.5,
+    6.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.355,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.928,
+    "coverage": 0.75
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1363,
+   "frame": "block011_edge_09_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    12.5,
+    15.0
+   ],
+   "visible_size_units": [
+    12.25,
+    10.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.924,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.971,
+    "coverage": 0.511
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block011_edge_09_color_001.png"
+  },
+  {
+   "id": 1364,
+   "frame": "block011_edge_10_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "corner",
+   "size_units": [
+    17.0,
+    15.0
+   ],
+   "visible_size_units": [
+    14.75,
+    11.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.878,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.986,
+    "coverage": 0.51
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block011_edge_10_color_001.png"
+  },
+  {
+   "id": 211,
+   "frame": "lightsquare_01_05_color_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 916,
+   "frame": "d_whiteBlock_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 917,
+   "frame": "d_whiteBlock_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    7.5,
+    7.5
+   ],
+   "visible_size_units": [
+    7.5,
+    7.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1195,
+   "frame": "block006_color_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1964,
+   "frame": "blockPiece_001_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    10.0,
+    10.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 495,
+   "frame": "d_largeSquare_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    40.0,
+    40.0
+   ],
+   "visible_size_units": [
+    40.0,
+    40.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1006,
+   "class": "GameObject"
+  },
+  {
+   "id": 279,
+   "frame": "d_square_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.8,
+    "coverage": 1.0
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 259,
+   "frame": "lightsquare_03_05_color_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.788,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 282,
+   "frame": "d_square_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.651,
+    "coverage": 1.0
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 251,
+   "frame": "lightsquare_02_05_color_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.996,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.687,
+    "coverage": 0.81
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1820,
+   "frame": "lightsquare_02_01_color_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.932,
+    "coverage": 0.81
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1821,
+   "frame": "lightsquare_02_02_color_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.85,
+    "coverage": 0.81
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1823,
+   "frame": "lightsquare_02_03_color_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.917,
+    "coverage": 0.81
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1824,
+   "frame": "lightsquare_02_04_color_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.997,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.783,
+    "coverage": 0.81
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 266,
+   "frame": "lightsquare_04_05_color_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.845,
+    "coverage": 0.889
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 281,
+   "frame": "d_square_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.676,
+    "coverage": 0.889
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 273,
+   "frame": "lightsquare_05_05_color_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.777,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 233,
+   "frame": "d_square_03_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.611,
+    "coverage": 1.0
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 277,
+   "frame": "lightsquare_05_brick02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    15.0
+   ],
+   "visible_size_units": [
+    30.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.773,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 234,
+   "frame": "d_square_03_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    15.0
+   ],
+   "visible_size_units": [
+    30.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.607,
+    "coverage": 1.0
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 280,
+   "frame": "d_square_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.732,
+    "coverage": 0.81
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 1140,
+   "frame": "square_g_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.406,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.413,
+    "coverage": 1.0
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1146,
+   "frame": "square_g_09_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.828,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.324,
+    "coverage": 1.0
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 1148,
+   "frame": "square_g_11_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "square_fill",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": false,
+   "sprite_tone": {
+    "mean_value": 0.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.702,
+    "coverage": 1.0
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 503,
+   "frame": "d_gradient_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    30.0,
+    20.0
+   ],
+   "visible_size_units": [
+    30.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.562,
+    "coverage": 0.8
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 504,
+   "frame": "d_gradient_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    20.0,
+    20.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.41,
+    "coverage": 0.504
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 505,
+   "frame": "d_gradient_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.654,
+    "coverage": 0.787
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1273,
+   "frame": "d_gradient_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    20.0,
+    20.0
+   ],
+   "visible_size_units": [
+    11.25,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.406,
+    "coverage": 0.255
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1274,
+   "frame": "d_gradient_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    20.0,
+    20.0
+   ],
+   "visible_size_units": [
+    7.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.402,
+    "coverage": 0.151
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1291,
+   "frame": "d_gradient_06_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    15.0,
+    20.0
+   ],
+   "visible_size_units": [
+    15.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.562,
+    "coverage": 0.8
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1009,
+   "frame": "d_gradient_b_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    8.0,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.406,
+    "coverage": 0.496
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1010,
+   "frame": "d_gradient_b_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.648,
+    "coverage": 0.786
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1271,
+   "frame": "d_gradient_b_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    5.5,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.397,
+    "coverage": 0.253
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1272,
+   "frame": "d_gradient_b_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    10.0,
+    10.0
+   ],
+   "visible_size_units": [
+    3.5,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.384,
+    "coverage": 0.153
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1292,
+   "frame": "d_gradient_b_06_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    15.0,
+    10.0
+   ],
+   "visible_size_units": [
+    15.0,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.555,
+    "coverage": 0.8
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1011,
+   "frame": "d_gradient_c_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    24.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.564,
+    "coverage": 0.8
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1012,
+   "frame": "d_gradient_c_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    24.25,
+    24.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.411,
+    "coverage": 0.507
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1013,
+   "frame": "d_gradient_c_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.73,
+    "coverage": 0.972
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1269,
+   "frame": "d_gradient_c_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    17.0,
+    24.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.409,
+    "coverage": 0.255
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1270,
+   "frame": "d_gradient_c_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    10.75,
+    24.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.412,
+    "coverage": 0.154
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1293,
+   "frame": "d_gradient_c_06_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    15.0,
+    30.0
+   ],
+   "visible_size_units": [
+    15.0,
+    24.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.564,
+    "coverage": 0.8
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1228,
+   "frame": "d_waveBG_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.623,
+    "coverage": 1.0
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 3825,
+   "frame": "particle_25_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    11.5,
+    11.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.979,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.529,
+    "coverage": 0.408
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3828,
+   "frame": "particle_28_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    10.5,
+    10.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.797,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.376,
+    "coverage": 0.327
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3829,
+   "frame": "particle_29_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    14.0,
+    14.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.672,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.574,
+    "coverage": 0.609
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3843,
+   "frame": "particle_43_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    13.0,
+    13.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.986,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.522,
+    "coverage": 0.46
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3958,
+   "frame": "particle_158_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    21.25,
+    21.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.424,
+    "coverage": 0.347
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3959,
+   "frame": "particle_159_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    23.75,
+    24.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.508,
+    "coverage": 0.435
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3960,
+   "frame": "particle_160_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "glow",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    26.0,
+    26.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.714,
+    "coverage": 0.517
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1367,
+   "frame": "block011_light_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    14.5,
+    42.5
+   ],
+   "visible_size_units": [
+    14.5,
+    36.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.658,
+    "coverage": 0.227
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1368,
+   "frame": "block011_light_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    14.5,
+    30.5
+   ],
+   "visible_size_units": [
+    14.5,
+    25.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.652,
+    "coverage": 0.276
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1369,
+   "frame": "block011_light_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    19.0,
+    41.5
+   ],
+   "visible_size_units": [
+    17.25,
+    36.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.656,
+    "coverage": 0.189
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1370,
+   "frame": "block011_light_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    19.0,
+    30.5
+   ],
+   "visible_size_units": [
+    17.0,
+    25.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.665,
+    "coverage": 0.192
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1371,
+   "frame": "block011_light_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    32.5,
+    17.0
+   ],
+   "visible_size_units": [
+    31.5,
+    13.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.65,
+    "coverage": 0.206
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1372,
+   "frame": "block011_light_06_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.5,
+    17.0
+   ],
+   "visible_size_units": [
+    30.5,
+    15.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.655,
+    "coverage": 0.269
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1453,
+   "frame": "block012_light_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    13.5,
+    30.0
+   ],
+   "visible_size_units": [
+    8.25,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.684,
+    "coverage": 0.238
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1454,
+   "frame": "block012_light_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.0,
+    9.0
+   ],
+   "visible_size_units": [
+    30.0,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.688,
+    "coverage": 0.371
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1455,
+   "frame": "block012_light_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    8.0,
+    30.0
+   ],
+   "visible_size_units": [
+    7.5,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.693,
+    "coverage": 0.353
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1456,
+   "frame": "block012_light_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.0,
+    15.0
+   ],
+   "visible_size_units": [
+    30.0,
+    10.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.68,
+    "coverage": 0.222
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1457,
+   "frame": "block012_light_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    17.25,
+    13.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.704,
+    "coverage": 0.058
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1458,
+   "frame": "block012_light_06_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    14.75,
+    13.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.701,
+    "coverage": 0.052
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1459,
+   "frame": "block012_light_07_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    17.25,
+    16.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.703,
+    "coverage": 0.065
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1460,
+   "frame": "block012_light_08_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    14.75,
+    16.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.703,
+    "coverage": 0.06
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1653,
+   "frame": "block013_light_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    9.0,
+    30.0
+   ],
+   "visible_size_units": [
+    7.5,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.668,
+    "coverage": 0.35
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1654,
+   "frame": "block013_light_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    12.5,
+    30.0
+   ],
+   "visible_size_units": [
+    9.5,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.672,
+    "coverage": 0.24
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1655,
+   "frame": "block013_light_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    9.0,
+    30.0
+   ],
+   "visible_size_units": [
+    6.75,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.667,
+    "coverage": 0.325
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1656,
+   "frame": "block013_light_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    11.0,
+    30.0
+   ],
+   "visible_size_units": [
+    8.25,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.663,
+    "coverage": 0.281
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1661,
+   "frame": "block013_light_09_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.0,
+    14.5
+   ],
+   "visible_size_units": [
+    30.0,
+    9.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.666,
+    "coverage": 0.202
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1662,
+   "frame": "block013_light_10_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.0,
+    13.5
+   ],
+   "visible_size_units": [
+    30.0,
+    9.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.664,
+    "coverage": 0.219
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1669,
+   "frame": "block013_light_c_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    6.5,
+    8.0
+   ],
+   "visible_size_units": [
+    5.25,
+    6.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.697,
+    "coverage": 0.41
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 1670,
+   "frame": "block013_light_c_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    7.5,
+    14.0
+   ],
+   "visible_size_units": [
+    6.25,
+    12.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.67,
+    "coverage": 0.37
+   },
+   "default_base_color": 4,
+   "class": "GameObject"
+  },
+  {
+   "id": 719,
+   "frame": "pit_07_shine_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.0,
+    18.0
+   ],
+   "visible_size_units": [
+    30.0,
+    9.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.194
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 721,
+   "frame": "pit_07_2_shine_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    10.5,
+    10.5
+   ],
+   "visible_size_units": [
+    9.0,
+    9.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.258
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 990,
+   "frame": "pit_07_3_shine_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    22.75,
+    22.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.95,
+    "coverage": 0.095
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 992,
+   "frame": "pit_07_4_shine_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    10.5,
+    10.5
+   ],
+   "visible_size_units": [
+    9.0,
+    9.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.947,
+    "coverage": 0.187
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1019,
+   "frame": "d_flashRing_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    29.5,
+    130.0
+   ],
+   "visible_size_units": [
+    29.5,
+    55.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.492,
+    "coverage": 0.254
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1020,
+   "frame": "d_flashRing_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    16.0,
+    106.5
+   ],
+   "visible_size_units": [
+    16.0,
+    44.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.489,
+    "coverage": 0.246
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1021,
+   "frame": "d_flashRing_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "light",
+   "size_units": [
+    6.5,
+    81.0
+   ],
+   "visible_size_units": [
+    6.5,
+    31.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.476,
+    "coverage": 0.231
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1764,
+   "frame": "d_small_ball_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    8.0,
+    8.0
+   ],
+   "visible_size_units": [
+    8.0,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.969,
+    "coverage": 0.812
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1765,
+   "frame": "d_small_ball_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    8.0,
+    8.0
+   ],
+   "visible_size_units": [
+    8.0,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.867,
+    "coverage": 0.531
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1766,
+   "frame": "d_small_ball_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    8.0,
+    8.0
+   ],
+   "visible_size_units": [
+    8.0,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.958,
+    "coverage": 0.516
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1767,
+   "frame": "d_small_ball_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    8.0,
+    3.0
+   ],
+   "visible_size_units": [
+    8.0,
+    3.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 1.0
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1768,
+   "frame": "d_small_ball_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    5.5,
+    8.0
+   ],
+   "visible_size_units": [
+    5.5,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.91,
+    "coverage": 0.409
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 725,
+   "frame": "d_link_b_01_color_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    9.0,
+    9.0
+   ],
+   "visible_size_units": [
+    9.0,
+    9.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.971,
+    "coverage": 0.815
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1158,
+   "frame": "smallOutline_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    1.5,
+    1.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.01
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "glow_frame": "smallOutline_05_glow_001.png"
+  },
+  {
+   "id": 406,
+   "frame": "d_grass_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    13.5,
+    14.0
+   ],
+   "visible_size_units": [
+    13.0,
+    13.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.879,
+    "coverage": 0.241
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 407,
+   "frame": "d_grass_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    11.0,
+    8.5
+   ],
+   "visible_size_units": [
+    11.0,
+    8.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.867,
+    "coverage": 0.362
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 408,
+   "frame": "d_grass_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    5.5,
+    6.0
+   ],
+   "visible_size_units": [
+    5.0,
+    5.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.867,
+    "coverage": 0.4
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 414,
+   "frame": "d_grass_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    13.5,
+    13.5
+   ],
+   "visible_size_units": [
+    13.5,
+    13.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.908,
+    "coverage": 0.395
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 906,
+   "frame": "d_grass_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    25.0,
+    20.5
+   ],
+   "visible_size_units": [
+    24.75,
+    20.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.928,
+    "coverage": 0.353
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 940,
+   "frame": "d_grassDetail_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    24.5,
+    31.0
+   ],
+   "visible_size_units": [
+    24.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.928,
+    "coverage": 0.306
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 941,
+   "frame": "d_grassDetail_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    12.0,
+    16.0
+   ],
+   "visible_size_units": [
+    11.5,
+    15.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.882,
+    "coverage": 0.34
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 942,
+   "frame": "d_grassDetail_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    8.0,
+    11.0
+   ],
+   "visible_size_units": [
+    7.5,
+    10.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.855,
+    "coverage": 0.308
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1471,
+   "frame": "block013_detail_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    30.0,
+    13.0
+   ],
+   "visible_size_units": [
+    30.0,
+    12.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.835,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.862,
+    "coverage": 0.764
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_detail_01_color_001.png"
+  },
+  {
+   "id": 1472,
+   "frame": "block013_detail_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    3.0,
+    11.0
+   ],
+   "visible_size_units": [
+    3.0,
+    8.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.769,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.852,
+    "coverage": 0.659
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_detail_02_color_001.png"
+  },
+  {
+   "id": 1473,
+   "frame": "block013_detail_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    32.0,
+    15.0
+   ],
+   "visible_size_units": [
+    32.0,
+    14.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.552,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.987,
+    "coverage": 0.732
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_detail_03_color_001.png"
+  },
+  {
+   "id": 1496,
+   "frame": "block013_detail_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    21.0,
+    16.0
+   ],
+   "visible_size_units": [
+    21.0,
+    15.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.587,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.975,
+    "coverage": 0.708
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_detail_04_color_001.png"
+  },
+  {
+   "id": 1507,
+   "frame": "block013_detail_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    15.0,
+    12.5
+   ],
+   "visible_size_units": [
+    15.0,
+    11.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.83,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.862,
+    "coverage": 0.794
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_detail_05_color_001.png"
+  },
+  {
+   "id": 1617,
+   "frame": "block013_detail_06_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    10.0,
+    11.0
+   ],
+   "visible_size_units": [
+    9.5,
+    10.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.844,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.891,
+    "coverage": 0.749
+   },
+   "default_base_color": 1004,
+   "class": "GameObject",
+   "color_child_frame": "block013_detail_06_color_001.png"
+  },
+  {
+   "id": 1608,
+   "frame": "d_sign_paint_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    9.5,
+    9.0
+   ],
+   "visible_size_units": [
+    9.5,
+    9.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.905,
+    "coverage": 0.377
+   },
+   "default_base_color": 1011,
+   "class": "GameObject"
+  },
+  {
+   "id": 1609,
+   "frame": "d_sign_paint_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    10.0,
+    4.5
+   ],
+   "visible_size_units": [
+    10.0,
+    4.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.868,
+    "coverage": 0.412
+   },
+   "default_base_color": 1011,
+   "class": "GameObject"
+  },
+  {
+   "id": 1610,
+   "frame": "d_sign_paint_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "detail_small",
+   "size_units": [
+    5.0,
+    5.5
+   ],
+   "visible_size_units": [
+    4.75,
+    5.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.878,
+    "coverage": 0.502
+   },
+   "default_base_color": 1011,
+   "class": "GameObject"
+  },
+  {
+   "id": 236,
+   "frame": "d_circle_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    50.0,
+    50.0
+   ],
+   "visible_size_units": [
+    50.0,
+    50.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.98,
+    "coverage": 0.453
+   },
+   "default_base_color": 1006,
+   "class": "GameObject"
+  },
+  {
+   "id": 497,
+   "frame": "d_circle_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    50.0,
+    50.0
+   ],
+   "visible_size_units": [
+    50.0,
+    50.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.994,
+    "coverage": 0.793
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 997,
+   "frame": "d_ringSeg_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    113.5,
+    113.5
+   ],
+   "visible_size_units": [
+    49.75,
+    49.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.624,
+    "coverage": 0.034
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 998,
+   "frame": "d_ringSeg_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    89.0,
+    89.0
+   ],
+   "visible_size_units": [
+    37.5,
+    37.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.759,
+    "coverage": 0.041
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 999,
+   "frame": "d_ringSeg_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    65.0,
+    64.5
+   ],
+   "visible_size_units": [
+    25.5,
+    25.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.864,
+    "coverage": 0.049
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1000,
+   "frame": "d_ringSeg_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    40.0,
+    40.0
+   ],
+   "visible_size_units": [
+    13.0,
+    13.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.932,
+    "coverage": 0.054
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 395,
+   "frame": "d_geometric_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    48.5,
+    42.0
+   ],
+   "visible_size_units": [
+    48.5,
+    42.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.996,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.84,
+    "coverage": 0.508
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 396,
+   "frame": "d_geometric_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    22.5,
+    19.5
+   ],
+   "visible_size_units": [
+    22.5,
+    19.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.996,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.875,
+    "coverage": 0.575
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 394,
+   "frame": "d_geometric_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    80.25,
+    70.0
+   ],
+   "visible_size_units": [
+    40.25,
+    35.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.784,
+    "coverage": 0.098
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 150,
+   "frame": "d_cross_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    44.0,
+    44.0
+   ],
+   "visible_size_units": [
+    44.0,
+    44.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.985,
+    "coverage": 0.47
+   },
+   "default_base_color": 1006,
+   "class": "GameObject"
+  },
+  {
+   "id": 1830,
+   "frame": "gridLine04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    15.5,
+    15.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.861,
+    "coverage": 0.03
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 1831,
+   "frame": "d_scaleFadeRing_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.945,
+    "coverage": 0.157
+   },
+   "default_base_color": 1007,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1832,
+   "frame": "d_scaleFadeRing_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.949,
+    "coverage": 0.298
+   },
+   "default_base_color": 1007,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1833,
+   "frame": "d_scaleFadeRing_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.994,
+    "coverage": 0.793
+   },
+   "default_base_color": 1007,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1834,
+   "frame": "d_scaleFadeRing_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    15.0,
+    15.0
+   ],
+   "visible_size_units": [
+    15.0,
+    15.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.99,
+    "coverage": 0.797
+   },
+   "default_base_color": 1007,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 3801,
+   "frame": "particle_01_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    14.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.979,
+    "coverage": 0.664
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3802,
+   "frame": "particle_02_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.983,
+    "coverage": 0.806
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3803,
+   "frame": "particle_03_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.979,
+    "coverage": 0.508
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3804,
+   "frame": "particle_04_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    15.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.954,
+    "coverage": 0.412
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3805,
+   "frame": "particle_05_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.34
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3806,
+   "frame": "particle_06_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    14.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.887,
+    "coverage": 0.249
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3807,
+   "frame": "particle_07_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.905,
+    "coverage": 0.292
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3808,
+   "frame": "particle_08_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.942,
+    "coverage": 0.271
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3809,
+   "frame": "particle_09_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    15.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.894,
+    "coverage": 0.279
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3812,
+   "frame": "particle_12_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    13.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.639,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.963,
+    "coverage": 0.466
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3961,
+   "frame": "particle_161_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    31.0,
+    31.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.473,
+    "coverage": 0.422
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3962,
+   "frame": "particle_162_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    20.5,
+    29.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.984,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.48,
+    "coverage": 0.298
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3965,
+   "frame": "particle_165_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    32.0,
+    32.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.493,
+    "coverage": 0.341
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3911,
+   "frame": "particle_111_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.889,
+    "coverage": 0.456
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3938,
+   "frame": "particle_138_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.965,
+    "coverage": 0.797
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3939,
+   "frame": "particle_139_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    14.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.961,
+    "coverage": 0.509
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3883,
+   "frame": "particle_83_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.961,
+    "coverage": 0.557
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 229,
+   "frame": "d_bar_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.768,
+    "coverage": 0.772
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 230,
+   "frame": "d_bar_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    30.0,
+    30.0
+   ],
+   "visible_size_units": [
+    30.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.765,
+    "coverage": 0.77
+   },
+   "default_base_color": 1007,
+   "class": "GameObject"
+  },
+  {
+   "id": 132,
+   "frame": "d_arrow_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    46.5,
+    33.5
+   ],
+   "visible_size_units": [
+    46.5,
+    33.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.979,
+    "coverage": 0.43
+   },
+   "default_base_color": 1006,
+   "class": "GameObject"
+  },
+  {
+   "id": 3080,
+   "frame": "gdh_platformArt_01_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    8.0,
+    8.0
+   ],
+   "visible_size_units": [
+    8.0,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.91,
+    "coverage": 0.526
+   },
+   "default_base_color": 2,
+   "class": "GameObject",
+   "color_child_frame": "gdh_platformArt_01_color_001.png"
+  },
+  {
+   "id": 3081,
+   "frame": "gdh_platformArt_02_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    8.0
+   ],
+   "visible_size_units": [
+    16.0,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.947,
+    "coverage": 0.451
+   },
+   "default_base_color": 2,
+   "class": "GameObject",
+   "color_child_frame": "gdh_platformArt_02_color_001.png"
+  },
+  {
+   "id": 3082,
+   "frame": "gdh_platformArt_03_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    8.0,
+    8.0
+   ],
+   "visible_size_units": [
+    8.0,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.609
+   },
+   "default_base_color": 2,
+   "class": "GameObject",
+   "color_child_frame": "gdh_platformArt_03_color_001.png"
+  },
+  {
+   "id": 3083,
+   "frame": "gdh_platformArt_04_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    16.0,
+    8.0
+   ],
+   "visible_size_units": [
+    16.0,
+    8.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 1.0,
+    "coverage": 0.492
+   },
+   "default_base_color": 2,
+   "class": "GameObject",
+   "color_child_frame": "gdh_platformArt_04_color_001.png"
+  },
+  {
+   "id": 137,
+   "frame": "d_wheel_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    80.0,
+    80.0
+   ],
+   "visible_size_units": [
+    40.0,
+    79.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.827,
+    "coverage": 0.143
+   },
+   "default_base_color": 1006,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 139,
+   "frame": "d_wheel_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    27.5,
+    27.0
+   ],
+   "visible_size_units": [
+    27.5,
+    27.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.927,
+    "coverage": 0.372
+   },
+   "default_base_color": 1006,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 180,
+   "frame": "d_cartwheel_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "geometric_shape",
+   "size_units": [
+    53.75,
+    53.75
+   ],
+   "visible_size_units": [
+    27.0,
+    27.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.786,
+    "coverage": 0.138
+   },
+   "default_base_color": 1006,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 48,
+   "frame": "d_cloud_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    115.0,
+    38.5
+   ],
+   "visible_size_units": [
+    115.0,
+    36.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.68,
+    "coverage": 0.561
+   },
+   "default_base_color": 1006,
+   "class": "GameObject"
+  },
+  {
+   "id": 49,
+   "frame": "d_cloud_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    80.0,
+    32.0
+   ],
+   "visible_size_units": [
+    80.0,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.634,
+    "coverage": 0.515
+   },
+   "default_base_color": 1006,
+   "class": "GameObject"
+  },
+  {
+   "id": 129,
+   "frame": "d_cloud_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    79.0,
+    31.5
+   ],
+   "visible_size_units": [
+    79.0,
+    31.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.895,
+    "coverage": 0.589
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 130,
+   "frame": "d_cloud_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    114.5,
+    44.0
+   ],
+   "visible_size_units": [
+    114.5,
+    44.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.905,
+    "coverage": 0.58
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 131,
+   "frame": "d_cloud_05_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    38.0,
+    18.0
+   ],
+   "visible_size_units": [
+    38.0,
+    18.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.872,
+    "coverage": 0.606
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 222,
+   "frame": "d_roundCloud_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    94.5,
+    94.5
+   ],
+   "visible_size_units": [
+    47.25,
+    47.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.77,
+    "coverage": 0.096
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 223,
+   "frame": "d_roundCloud_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    57.0,
+    63.5
+   ],
+   "visible_size_units": [
+    57.0,
+    63.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.78,
+    "coverage": 0.437
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 224,
+   "frame": "d_roundCloud_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    36.0,
+    37.0
+   ],
+   "visible_size_units": [
+    36.0,
+    34.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.998,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.793,
+    "coverage": 0.472
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 936,
+   "frame": "d_artCloud_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    60.5,
+    34.5
+   ],
+   "visible_size_units": [
+    60.5,
+    34.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.798,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.99,
+    "coverage": 0.667
+   },
+   "default_base_color": 1011,
+   "class": "GameObject"
+  },
+  {
+   "id": 937,
+   "frame": "d_artCloud_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    77.5,
+    41.0
+   ],
+   "visible_size_units": [
+    77.5,
+    40.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.824,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.992,
+    "coverage": 0.643
+   },
+   "default_base_color": 1011,
+   "class": "GameObject"
+  },
+  {
+   "id": 938,
+   "frame": "d_artCloud_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    36.0,
+    23.5
+   ],
+   "visible_size_units": [
+    36.0,
+    23.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.733,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.985,
+    "coverage": 0.679
+   },
+   "default_base_color": 1011,
+   "class": "GameObject"
+  },
+  {
+   "id": 113,
+   "frame": "d_brick_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    124.5,
+    40.0
+   ],
+   "visible_size_units": [
+    124.5,
+    37.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.702,
+    "coverage": 0.616
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 114,
+   "frame": "d_brick_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    86.0,
+    35.0
+   ],
+   "visible_size_units": [
+    86.0,
+    31.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.677,
+    "coverage": 0.581
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 115,
+   "frame": "d_brick_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    55.5,
+    27.0
+   ],
+   "visible_size_units": [
+    55.5,
+    24.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.607,
+    "coverage": 0.598
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 450,
+   "frame": "d_pillar_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    47.5,
+    60.0
+   ],
+   "visible_size_units": [
+    47.5,
+    59.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.703,
+    "coverage": 0.659
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 451,
+   "frame": "d_pillar_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    36.0,
+    38.5
+   ],
+   "visible_size_units": [
+    36.0,
+    38.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.751,
+    "coverage": 0.69
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 452,
+   "frame": "d_pillar_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    25.5,
+    21.5
+   ],
+   "visible_size_units": [
+    25.5,
+    21.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.744,
+    "coverage": 0.767
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 18,
+   "frame": "d_spikes_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    128.0,
+    41.5
+   ],
+   "visible_size_units": [
+    126.0,
+    39.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.595,
+    "coverage": 0.376
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 19,
+   "frame": "d_spikes_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    104.0,
+    36.5
+   ],
+   "visible_size_units": [
+    103.25,
+    36.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.564,
+    "coverage": 0.331
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 20,
+   "frame": "d_spikes_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    73.0,
+    29.0
+   ],
+   "visible_size_units": [
+    71.0,
+    27.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.544,
+    "coverage": 0.36
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 21,
+   "frame": "d_spikes_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "background_large",
+   "size_units": [
+    42.0,
+    13.0
+   ],
+   "visible_size_units": [
+    41.0,
+    12.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.615,
+    "coverage": 0.417
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 41,
+   "frame": "chain_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    19.5,
+    69.5
+   ],
+   "visible_size_units": [
+    19.25,
+    69.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.687,
+    "coverage": 0.301
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 106,
+   "frame": "d_02_chain_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    27.0,
+    65.5
+   ],
+   "visible_size_units": [
+    27.0,
+    65.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.713,
+    "coverage": 0.353
+   },
+   "default_base_color": 1006,
+   "class": "GameObject"
+  },
+  {
+   "id": 107,
+   "frame": "d_02_chain_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    27.0,
+    38.0
+   ],
+   "visible_size_units": [
+    27.0,
+    37.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.8,
+    "coverage": 0.369
+   },
+   "default_base_color": 1006,
+   "class": "GameObject"
+  },
+  {
+   "id": 110,
+   "frame": "d_chain_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    19.5,
+    34.0
+   ],
+   "visible_size_units": [
+    19.25,
+    33.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.76,
+    "coverage": 0.347
+   },
+   "default_base_color": 1005,
+   "class": "GameObject"
+  },
+  {
+   "id": 498,
+   "frame": "d_03_chain_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    10.0,
+    21.0
+   ],
+   "visible_size_units": [
+    10.0,
+    21.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.997,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.832,
+    "coverage": 0.615
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 499,
+   "frame": "d_03_chain_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    23.5,
+    12.5
+   ],
+   "visible_size_units": [
+    23.5,
+    12.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.946,
+    "coverage": 0.522
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3050,
+   "frame": "gdh_chain_01_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    16.0,
+    24.0
+   ],
+   "visible_size_units": [
+    16.0,
+    24.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.937,
+    "coverage": 0.398
+   },
+   "default_base_color": 1,
+   "class": "GameObject",
+   "color_child_frame": "gdh_chain_01_color_001.png"
+  },
+  {
+   "id": 3052,
+   "frame": "gdh_chain_02_001.png",
+   "sheet": "GJ_GameSheet02-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    7.0,
+    22.0
+   ],
+   "visible_size_units": [
+    7.0,
+    22.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.964,
+    "coverage": 0.481
+   },
+   "default_base_color": 1,
+   "class": "GameObject",
+   "color_child_frame": "gdh_chain_02_color_001.png"
+  },
+  {
+   "id": 15,
+   "frame": "rod_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    6.5,
+    42.0
+   ],
+   "visible_size_units": [
+    6.5,
+    42.0
+   ],
+   "colorable": false,
+   "sprite_tone": {
+    "mean_value": 0.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.549,
+    "coverage": 0.345
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 16,
+   "frame": "rod_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    6.0,
+    26.5
+   ],
+   "visible_size_units": [
+    6.0,
+    26.5
+   ],
+   "colorable": false,
+   "sprite_tone": {
+    "mean_value": 0.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.588,
+    "coverage": 0.328
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 17,
+   "frame": "rod_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    5.5,
+    12.5
+   ],
+   "visible_size_units": [
+    5.25,
+    12.5
+   ],
+   "colorable": false,
+   "sprite_tone": {
+    "mean_value": 0.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.567,
+    "coverage": 0.339
+   },
+   "default_base_color": 1004,
+   "class": "GameObject"
+  },
+  {
+   "id": 375,
+   "frame": "d_rotatingBall_01_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    25.0,
+    119.0
+   ],
+   "visible_size_units": [
+    25.0,
+    67.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.703,
+    "coverage": 0.284
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 376,
+   "frame": "d_rotatingBall_02_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    21.5,
+    95.5
+   ],
+   "visible_size_units": [
+    21.5,
+    53.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.71,
+    "coverage": 0.286
+   },
+   "default_base_color": 1006,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 377,
+   "frame": "d_rotatingBall_03_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    18.5,
+    69.0
+   ],
+   "visible_size_units": [
+    18.5,
+    39.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.704,
+    "coverage": 0.315
+   },
+   "default_base_color": 1005,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 378,
+   "frame": "d_rotatingBall_04_001.png",
+   "sheet": "GJ_GameSheet-uhd.plist",
+   "category": "chain_or_hanging",
+   "size_units": [
+    13.5,
+    46.0
+   ],
+   "visible_size_units": [
+    13.5,
+    26.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.696,
+    "coverage": 0.331
+   },
+   "default_base_color": 1006,
+   "class": "EnhancedGameObject",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 3826,
+   "frame": "particle_26_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    11.0,
+    14.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.544,
+    "coverage": 0.4
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3827,
+   "frame": "particle_27_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    13.75,
+    13.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.471,
+    "coverage": 0.281
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3837,
+   "frame": "particle_37_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.834,
+    "coverage": 0.26
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3841,
+   "frame": "particle_41_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    12.5,
+    12.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.708,
+    "coverage": 0.412
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3842,
+   "frame": "particle_42_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    14.25,
+    14.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.465,
+    "coverage": 0.312
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3957,
+   "frame": "particle_157_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    12.0,
+    14.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.878,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.571,
+    "coverage": 0.125
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3966,
+   "frame": "particle_166_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    27.75,
+    27.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.728,
+    "coverage": 0.278
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3967,
+   "frame": "particle_167_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    29.25,
+    29.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.757,
+    "coverage": 0.136
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3968,
+   "frame": "particle_168_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    27.75,
+    28.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.577,
+    "coverage": 0.238
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3972,
+   "frame": "particle_172_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    22.5,
+    21.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.547,
+    "coverage": 0.203
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3885,
+   "frame": "particle_85_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.921,
+    "coverage": 0.438
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3886,
+   "frame": "particle_86_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    16.0,
+    16.0
+   ],
+   "visible_size_units": [
+    16.0,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.902,
+    "coverage": 0.386
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3980,
+   "frame": "particle_180_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    24.0,
+    23.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.47,
+    "coverage": 0.401
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3981,
+   "frame": "particle_181_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    28.5,
+    29.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.714,
+    "mean_saturation": 0.006,
+    "mean_alpha": 0.784,
+    "coverage": 0.651
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3982,
+   "frame": "particle_182_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    27.5,
+    27.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.615,
+    "coverage": 0.522
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3984,
+   "frame": "particle_184_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    30.5,
+    30.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.735,
+    "coverage": 0.649
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3985,
+   "frame": "particle_185_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    32.0,
+    32.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.999,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.616,
+    "coverage": 0.304
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 3987,
+   "frame": "particle_187_001.png",
+   "sheet": "GJ_ParticleSheet-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    32.0,
+    32.0
+   ],
+   "visible_size_units": [
+    29.0,
+    30.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.94,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.71,
+    "coverage": 0.433
+   },
+   "default_base_color": 1,
+   "class": "GameObject"
+  },
+  {
+   "id": 1851,
+   "frame": "gj_drops01_001.png",
+   "sheet": "FireSheet_01-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    14.0,
+    43.0
+   ],
+   "visible_size_units": [
+    12.0,
+    19.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.921,
+    "coverage": 0.121
+   },
+   "default_base_color": 1011,
+   "class": "EnhancedGameObject",
+   "color_child_frame": "gj_drops01_color_001.png",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1853,
+   "frame": "gj_drops03_001.png",
+   "sheet": "FireSheet_01-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    5.0,
+    71.0
+   ],
+   "visible_size_units": [
+    4.0,
+    40.25
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.891,
+    "coverage": 0.173
+   },
+   "default_base_color": 1011,
+   "class": "EnhancedGameObject",
+   "color_child_frame": "gj_drops03_color_001.png",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1855,
+   "frame": "gj_drops05_001.png",
+   "sheet": "FireSheet_01-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    6.5,
+    41.0
+   ],
+   "visible_size_units": [
+    4.75,
+    3.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.939,
+    "coverage": 0.042
+   },
+   "default_base_color": 1011,
+   "class": "EnhancedGameObject",
+   "color_child_frame": "gj_drops05_color_001.png",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1856,
+   "frame": "gj_bubble01_005.png",
+   "sheet": "FireSheet_01-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    27.5,
+    23.0
+   ],
+   "visible_size_units": [
+    16.0,
+    11.5
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 0.987,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.97,
+    "coverage": 0.232
+   },
+   "default_base_color": 1011,
+   "class": "EnhancedGameObject",
+   "color_child_frame": "gj_bubble01_005.png",
+   "glow_frame": "gj_bubble01_005.png",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1857,
+   "frame": "gj_lightning01_001.png",
+   "sheet": "FireSheet_01-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    60.0,
+    15.5
+   ],
+   "visible_size_units": [
+    60.0,
+    13.75
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.959,
+    "coverage": 0.301
+   },
+   "default_base_color": 1011,
+   "class": "EnhancedGameObject",
+   "color_child_frame": "gj_lightning01_color_001.png",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  },
+  {
+   "id": 1849,
+   "frame": "gj_smoke01_001.png",
+   "sheet": "FireSheet_01-uhd.plist",
+   "category": "particle_like",
+   "size_units": [
+    47.5,
+    21.5
+   ],
+   "visible_size_units": [
+    35.75,
+    16.0
+   ],
+   "colorable": true,
+   "sprite_tone": {
+    "mean_value": 1.0,
+    "mean_saturation": 0.0,
+    "mean_alpha": 0.945,
+    "coverage": 0.194
+   },
+   "default_base_color": 1011,
+   "class": "EnhancedGameObject",
+   "color_child_frame": "gj_smoke01_color_001.png",
+   "note": "EnhancedGameObject: may animate/rotate in-game"
+  }
+ ]
+}

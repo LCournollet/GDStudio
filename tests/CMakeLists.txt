@@ -1,0 +1,7 @@
+file(GLOB GDDS_TEST_SOURCES CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+add_executable(gdds_tests ${GDDS_TEST_SOURCES})
+target_link_libraries(gdds_tests PRIVATE gdds_core)
+if (MSVC)
+    target_compile_options(gdds_tests PRIVATE /utf-8 /W3)
+endif()
+add_test(NAME gdds_tests COMMAND gdds_tests)
