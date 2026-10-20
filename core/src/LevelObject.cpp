@@ -8,6 +8,10 @@
 
 namespace gdds {
 
+namespace key {
+bool isVolatile(int k) { return k == VolatileIndex; }
+}  // namespace key
+
 namespace zlayer {
 int rank(int z) {
     switch (z) {
@@ -270,6 +274,7 @@ std::string LevelObject::canonical(bool ignoreGroups) const {
     if (scaleX != 1) kv[key::ScaleX] = formatNumber(scaleX);
     if (scaleY != 1) kv[key::ScaleY] = formatNumber(scaleY);
     for (auto& [k, v] : extra) {
+        if (key::isVolatile(k)) continue;
         // Numeric values are normalized so "1.50" and "1.5" compare equal.
         auto d = toDouble(v);
         bool numeric = d && v.find_first_not_of("0123456789.-+eE") == std::string::npos;

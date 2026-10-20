@@ -102,6 +102,9 @@ GeneratedRecord GeneratedRecord::fromJson(json::Value const& v) {
     r.placementKey = v.get("key").asUInt64();
     r.fingerprint = v.get("fp").asUInt64();
     r.objectString = v.str("obj");
+    // The object string is the source of truth: recompute the fingerprint so
+    // projects saved before a change of the canonical form still match.
+    if (auto o = LevelObject::parse(r.objectString)) r.fingerprint = o->fingerprint();
     r.anchor = {v.num("ax"), v.num("ay")};
     r.state = stateFromName(v.str("state"));
     return r;

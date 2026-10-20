@@ -27,4 +27,22 @@ setup_geode_mod(GDDecorationStudio)
 target_link_libraries(GDDecorationStudio gdds_core)
 if (GDDS_GD_VERSION STREQUAL "2.2091")
     target_compile_definitions(GDDecorationStudio PRIVATE GDDS_GD_2091=1)
+
+    # The upstream 2.2091 bindings bind LevelEditorLayer::removeObject to
+    # 0x223320, a level-statistics function called only by PlayLayer::onQuit.
+    # The real function is 0x3f21b0 (null check, undo entry unless noUndo,
+    # removeObjectFromSection, removeSpecial: what EditorUI::onDeleteSelected
+    # does). Refuse to build with bindings that still have the wrong address;
+    # tools/experimental/build_2091.ps1 applies the fix.
+    if (DEFINED ENV{GEODE_BINDINGS_REPO_PATH})
+        set(GDDS_BINDINGS_DIR "$ENV{GEODE_BINDINGS_REPO_PATH}")
+    else()
+        set(GDDS_BINDINGS_DIR "${CPM_PACKAGE_bindings_SOURCE_DIR}")
+    endif()
+    file(STRINGS "${GDDS_BINDINGS_DIR}/bindings/2.2091/GeometryDash.bro" GDDS_REMOVE_OBJECT
+         REGEX "void removeObject\\(GameObject\\* object, bool noUndo\\)")
+    if (NOT GDDS_REMOVE_OBJECT MATCHES "win 0x3f21b0")
+        message(FATAL_ERROR "GD 2.2091 bindings in ${GDDS_BINDINGS_DIR} bind LevelEditorLayer::removeObject to "
+                            "'${GDDS_REMOVE_OBJECT}', expected win 0x3f21b0. Build with tools/experimental/build_2091.ps1.")
+    endif()
 endif()

@@ -502,6 +502,79 @@ public:
 };
 }  // namespace
 
+namespace {
+// A backend whose removal claims success but deletes nothing: what the game did
+// when a wrong LevelEditorLayer::removeObject binding was called (GD 2.2091).
+class NoDeleteBackend : public StringLevelBackend {
+public:
+    using StringLevelBackend::StringLevelBackend;
+    bool broken = false;
+    size_t removeObjects(std::vector<LevelObject> const& objects) override {
+        if (!broken) return StringLevelBackend::removeObjects(objects);
+        return objects.size();
+    }
+};
+
+// Rewrites key 155 on every object, like GD 2.2091 between creation and reload.
+void renumberVolatileKey(Level& level) {
+    int n = 1000;
+    for (auto& o : level.objects) o.setExtra(key::VolatileIndex, std::to_string(n++));
+}
+}  // namespace
+
+TEST_CASE("generation: a regeneration stops instead of duplicating when the game does not delete") {
+    auto lvl = makeTestLevel("G").level;
+    NoDeleteBackend b(lvl);
+    Studio studio(b);
+    studio.attach(presetProject());
+    CHECK(studio.run({}).ok);
+    auto objectsBefore = b.level().objects.size();
+    auto recordsBefore = studio.project().records.size();
+    b.broken = true;
+    GenerationRequest req;
+    req.mode = OperationMode::Regenerate;
+    auto out = studio.run(req);
+    CHECK(!out.ok);
+    CHECK(out.gameplayIntact);
+    CHECK_EQ(out.removed, 0);
+    CHECK_EQ(b.level().objects.size(), objectsBefore);         // nothing created on top
+    CHECK_EQ(studio.project().records.size(), recordsBefore);  // nothing forgotten
+    // Undo is guarded the same way.
+    CHECK(!studio.undo());
+    CHECK_EQ(b.level().objects.size(), objectsBefore);
+    // Once deletion works again, regeneration replaces the objects as usual.
+    b.broken = false;
+    auto again = studio.run(req);
+    CHECK(again.ok);
+    CHECK_EQ(size_t(again.removed), recordsBefore);
+}
+
+TEST_CASE("generation: objects are still recognised when the game renumbers key 155") {
+    auto lvl = makeTestLevel("J").level;
+    std::string savedLevel, savedProject;
+    {
+        StringLevelBackend b(lvl);
+        Studio studio(b);
+        studio.attach(presetProject());
+        CHECK(studio.run({}).ok);
+        renumberVolatileKey(b.level());
+        savedLevel = b.level().serialize();
+        savedProject = studio.project().toJson().dump();
+    }
+    StringLevelBackend b(Level::parse(savedLevel));
+    Studio studio(b);
+    auto rep = studio.attach(Project::fromJson(*json::parse(savedProject)));
+    CHECK(rep.linked > 300);
+    CHECK_EQ(rep.modified, 0);
+    CHECK_EQ(rep.missing, 0);
+    CHECK_EQ(rep.recovered, 0);
+    GenerationRequest req;
+    req.mode = OperationMode::Regenerate;
+    auto out = studio.run(req);
+    CHECK(out.ok);
+    CHECK_EQ(out.removed, rep.linked);
+}
+
 TEST_CASE("generation: any gameplay difference rolls the operation back") {
     auto lvl = makeTestLevel("D").level;
     EvilBackend b(lvl);

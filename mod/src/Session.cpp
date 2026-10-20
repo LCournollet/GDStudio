@@ -119,6 +119,10 @@ void StudioSession::verifyCatalog() {
         if (def.hasTag("library")) continue;
         auto obj = GameObject::createWithKey(def.id);
         ++checked;
+        // The type is assigned by customSetup, which the game itself calls right
+        // after createWithKey for standalone objects (EditorUI::getCreateBtn,
+        // LevelEditorLayer::createObject); a bare createWithKey still says Solid.
+        if (obj) obj->customSetup();
         if (!obj || static_cast<int>(obj->m_objectType) != static_cast<int>(GameObjectType::Decoration)) failed.push_back(def.id);
     }
     if (checked > 0 && failed.size() * 3 > size_t(checked)) {

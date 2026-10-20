@@ -86,10 +86,11 @@ CCMenu* Column::row(float height, std::optional<ccColor4B> background) {
         bg->setPosition({0, 0.5f});
         container->addChild(bg, -1);
     }
+    // Callers place items at y = 0 meaning "vertically centred in the row":
+    // the menu's own origin must therefore sit on the row's middle line.
     auto menu = CCMenu::create();
+    menu->ignoreAnchorPointForPosition(true);
     menu->setContentSize({m_width, height});
-    menu->ignoreAnchorPointForPosition(false);
-    menu->setAnchorPoint({0, 0.5f});
     menu->setPosition({0, height / 2});
     container->addChild(menu);
     m_nodes.push_back({container, m_y});

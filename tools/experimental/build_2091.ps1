@@ -78,8 +78,27 @@ if (-not $failed -and $Part -in @("mod", "all")) {
     $ver = (Get-Content "$Sdk\VERSION").Trim()
     if (Test-Path "$Sdk\bin\$ver") { throw "$Sdk\bin\$ver exists and would shadow the locally built loader in bin\nightly" }
     if (-not (Test-Path "$Sdk\bin\nightly\Geode.lib")) { throw "build the loader first (-Part loader)" }
-    # Same bindings revision as the loader (GD 2.2091 addresses).
-    $env:GEODE_BINDINGS_REPO_PATH = Join-Path $loaderBuild "_deps\bindings-src"
+    # Same bindings revision as the loader (GD 2.2091 addresses), plus the
+    # fixes this mod verified against the executable (verify_addresses.py).
+    $bindingsSrc = Join-Path $loaderBuild "_deps\bindings-src"
+    $bindings = Join-Path $BuildRoot "bindings-gdds"
+    robocopy $bindingsSrc $bindings /MIR /XD .git /NFL /NDL /NJH /NJS /NP | Out-Null
+    if ($LASTEXITCODE -ge 8) { throw "could not copy the bindings from $bindingsSrc" }
+    $fixes = @(
+        # LevelEditorLayer::removeObject: 0x223320 is a level-statistics function
+        # called only by PlayLayer::onQuit; the real one is 0x3f21b0.
+        @{ File = "bindings\2.2091\GeometryDash.bro";
+           Old = "void removeObject(GameObject* object, bool noUndo) = win 0x223320,";
+           New = "void removeObject(GameObject* object, bool noUndo) = win 0x3f21b0," }
+    )
+    foreach ($fix in $fixes) {
+        $path = Join-Path $bindings $fix.File
+        $text = [IO.File]::ReadAllText($path)
+        if ($text.Contains($fix.Old)) { $text = $text.Replace($fix.Old, $fix.New); [IO.File]::WriteAllText($path, $text, (New-Object Text.UTF8Encoding($false))); "  bindings fix applied: $($fix.New)" }
+        elseif ($text.Contains($fix.New)) { "  bindings already fixed upstream: $($fix.New)" }
+        else { throw "bindings changed upstream, check by hand: $($fix.Old)" }
+    }
+    $env:GEODE_BINDINGS_REPO_PATH = $bindings
     $modBuild = Join-Path $BuildRoot "mod"
     if ($Clean -and (Test-Path $modBuild)) { Remove-Item -Recurse -Force $modBuild }
     $log = Join-Path $BuildRoot "mod-build.log"

@@ -13,10 +13,16 @@ public:
     void refresh();
     static void openStudio();
 
+    // Moves the toolbar to the first spot of the editor's left side that no
+    // editor button covers (measured at runtime, so it follows GD's layout and
+    // other mods' buttons instead of a hard-coded position).
+    void placeClearOfEditorButtons();
+
 protected:
     bool init() override;
     void onExit() override;
     void tick(float dt);
+    void placeOnce(float dt);
 
 private:
     cocos2d::CCMenu* m_menu = nullptr;

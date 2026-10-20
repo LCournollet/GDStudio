@@ -15,11 +15,17 @@ This document lists, honestly, what is not guaranteed or not verified yet.
   `CCTouchClipper.h` / `CCKeyboardActionManager.h` are missing and signatures changed). The failure
   happens in Geode's own bindings library, before this mod's code.
 - They do compile with Geode's **`v6` development branch**, which natively targets 2.2091. An
-  experimental build (loader built from source + this mod) exists and passes every offline check,
-  but has **not been run in the game**: see `docs/EXPERIMENTAL_2091.md`.
+  experimental build (loader built from source + this mod) passes every offline check and was run
+  once in the game; the problems that session revealed are fixed: see `docs/EXPERIMENTAL_2091.md`.
 - Every game function used by the mod has a Windows address in the 2.2081 **and** 2.2091 bindings
   (checked in the broma files), and the 2.2091 addresses were checked against the installed
-  executable. The adapter deliberately avoids `getLevelString`, `EditButtonBar::create`,
+  executable, including that each one lies among its class's other methods. That last check exists
+  because the upstream 2.2091 address of `LevelEditorLayer::removeObject` turned out to be another
+  function; the experimental build fixes it, and the engine no longer trusts a backend's removal
+  count: it re-reads the level and stops an operation before creating anything if objects were not
+  really deleted.
+- GD 2.2091 writes a key `155` on every object whose value changes between creation and reload; it is
+  excluded from object fingerprints. The adapter deliberately avoids `getLevelString`, `EditButtonBar::create`,
   `LevelSettingsObject::create`, the UI's `undoLastAction`, `EditorPauseLayer::saveLevel` and the
   `node-ids` dependency, which are missing or broken in 2.2091.
 
@@ -30,9 +36,11 @@ This document lists, honestly, what is not guaranteed or not verified yet.
   not documented; if colors only show up after reopening the level, this is the culprit.
 - **Vertical offset** between level coordinates and editor nodes: measured automatically on an
   object (not hard-coded); only used to draw masks and the overlay.
-- **Touch priorities** of the toolbar and the mask tool in the editor.
+- **Touch priorities** of the toolbar and the mask tool in the editor. The toolbar's position is
+  chosen at runtime clear of the editor's buttons (logged as `Toolbar placed at (x, y)`).
 - **Visibility of hidden layers**: reapplied after every `updateVisibility` of the editor.
-- **Catalog check at startup**: creates every catalog object and reads its type; if more than a
+- **Catalog check at startup**: creates every catalog object, runs its `customSetup` (as the game
+  does for its toolbox icons) and reads its type; if more than a
   third of the checks fail (unreliable field read), the check is skipped.
 
 ## Gameplay safety: what is guaranteed, what is not

@@ -5,6 +5,7 @@
 #include <chrono>
 #include <set>
 #include <unordered_map>
+#include <unordered_set>
 
 namespace gdds {
 
@@ -54,6 +55,61 @@ void StringLevelBackend::writeChannels(std::vector<ColorChannel> const& channels
 
 // ---------------------------------------------------------------------------
 // Studio
+
+namespace {
+
+std::unordered_map<uint64_t, size_t> countByFingerprint(std::vector<LevelObject> const& objects) {
+    std::unordered_map<uint64_t, size_t> out;
+    for (auto& o : objects) ++out[o.fingerprint()];
+    return out;
+}
+
+// Removal check that does not trust the backend's own count: for every
+// fingerprint asked for, how many objects can be removed (`expected`) and how
+// many actually disappeared between `before` and `after` (`done`).
+struct RemovalCheck {
+    size_t expected = 0;
+    size_t done = 0;
+};
+
+RemovalCheck checkRemoval(std::vector<LevelObject> const& wanted, std::vector<LevelObject> const& before,
+                          std::vector<LevelObject> const& after) {
+    auto asked = countByFingerprint(wanted);
+    auto had = countByFingerprint(before);
+    auto has = countByFingerprint(after);
+    RemovalCheck c;
+    for (auto& [fp, n] : asked) {
+        size_t present = had.count(fp) ? had[fp] : 0;
+        size_t remaining = has.count(fp) ? has[fp] : 0;
+        size_t expected = std::min(n, present);
+        c.expected += expected;
+        c.done += std::min(expected, present > remaining ? present - remaining : 0);
+    }
+    return c;
+}
+
+// After a failed removal: forget the records among `uids` whose object is
+// really gone from `now`, keep the others.
+void forgetRecordsWithoutObject(Project& project, std::vector<uint64_t> const& uids, std::vector<LevelObject> const& now) {
+    std::unordered_multiset<uint64_t> live;
+    for (auto& o : now) live.insert(o.fingerprint());
+    std::vector<uint64_t> gone;
+    for (auto uid : uids) {
+        auto r = project.findRecord(uid);
+        if (!r) continue;
+        auto it = live.find(r->fingerprint);
+        if (it != live.end()) live.erase(it);
+        else gone.push_back(uid);
+    }
+    project.removeRecords(gone);
+}
+
+std::string removalFailure(RemovalCheck const& c, char const* what) {
+    return std::string(what) + " stopped: the game removed " + std::to_string(c.done) + " of " + std::to_string(c.expected) +
+           " objects, so nothing was re-created (no duplicates).";
+}
+
+}  // namespace
 
 Studio::Studio(LevelBackend& backend, DecoCatalog const& catalog) : m_backend(backend), m_catalog(catalog) {}
 
@@ -290,6 +346,13 @@ OperationOutcome Studio::moveObjectsToLayer(std::vector<LevelObject> const& obje
     auto beforeObjects = m_backend.readObjects();
     auto snapBefore = GameplaySnapshot::take(beforeObjects, m_project);
     m_backend.removeObjects(toRemove);
+    auto now = m_backend.readObjects();
+    if (auto check = checkRemoval(toRemove, beforeObjects, now); check.done < check.expected) {
+        forgetRecordsWithoutObject(m_project, recordUids, now);
+        out.message = removalFailure(check, "Move");
+        m_lastError = out.message;
+        return out;
+    }
     m_project.removeRecords(recordUids);
     auto stored = m_backend.createObjects(toCreate);
     auto& op = m_project.beginOperation("move-to-layer", {layerId}, {});
@@ -324,7 +387,28 @@ OperationOutcome Studio::commit(GenerationResult result, GenerationRequest const
     for (auto uid : result.removeRecords)
         if (auto r = m_project.findRecord(uid)) removedRecords.push_back(*r);
     auto toRemove = objectsOfRecords(result.removeRecords);
-    size_t removed = m_backend.removeObjects(toRemove);
+    size_t removed = 0;
+    if (!toRemove.empty()) {
+        m_backend.removeObjects(toRemove);
+        // Check what really disappeared instead of trusting the backend.
+        auto now = m_backend.readObjects();
+        auto check = checkRemoval(toRemove, beforeObjects, now);
+        removed = check.done;
+        if (check.done < check.expected) {
+            // The game did not delete what it was asked to delete (e.g. a wrong
+            // binding). Creating the new objects now would duplicate the
+            // decoration: stop here and only forget records whose object is gone.
+            forgetRecordsWithoutObject(m_project, result.removeRecords, now);
+            out.ok = false;
+            out.gameplayIntact = compareSnapshots(snapBefore, GameplaySnapshot::take(now, m_project)).identical();
+            out.removed = int(check.done);
+            out.message = removalFailure(check, "Operation");
+            m_lastError = out.message;
+            m_lastResult = std::move(result);
+            out.result = &m_lastResult;
+            return out;
+        }
+    }
     m_project.removeRecords(result.removeRecords);
 
     // ---- creation -----------------------------------------------------------------
@@ -424,7 +508,16 @@ bool Studio::undo() {
             addedUids.push_back(r.uid);
         }
     }
-    m_backend.removeObjects(toRemove);
+    if (!toRemove.empty()) {
+        auto before = m_backend.readObjects();
+        m_backend.removeObjects(toRemove);
+        auto now = m_backend.readObjects();
+        if (auto check = checkRemoval(toRemove, before, now); check.done < check.expected) {
+            forgetRecordsWithoutObject(m_project, addedUids, now);
+            m_lastError = removalFailure(check, "Undo");
+            return false;
+        }
+    }
     m_project.removeRecords(addedUids);
     // Re-create what it removed.
     std::vector<LevelObject> restore;
@@ -463,7 +556,16 @@ bool Studio::redo() {
             removedUids.push_back(r.uid);
         }
     }
-    m_backend.removeObjects(toRemove);
+    if (!toRemove.empty()) {
+        auto before = m_backend.readObjects();
+        m_backend.removeObjects(toRemove);
+        auto now = m_backend.readObjects();
+        if (auto check = checkRemoval(toRemove, before, now); check.done < check.expected) {
+            forgetRecordsWithoutObject(m_project, removedUids, now);
+            m_lastError = removalFailure(check, "Redo");
+            return false;
+        }
+    }
     m_project.removeRecords(removedUids);
     std::vector<LevelObject> recreate;
     for (auto& r : e->added)

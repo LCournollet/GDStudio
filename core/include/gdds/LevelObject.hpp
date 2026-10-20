@@ -43,6 +43,13 @@ constexpr int EditorLayer2 = 61;
 constexpr int CenterGroup = 71;
 constexpr int ScaleX = 128;
 constexpr int ScaleY = 129;
+// Written by GD 2.2091 on every object; its value changes between the moment an
+// object is created and the moment the level is saved and reopened, so it is
+// never part of an object's identity (see LevelObject::canonical).
+constexpr int VolatileIndex = 155;
+
+// Keys whose value the game rewrites on its own: excluded from fingerprints.
+bool isVolatile(int k);
 }  // namespace key
 
 // GD Z layer values as stored in the object string (key 24).
@@ -112,6 +119,7 @@ struct LevelObject {
     // Order-independent canonical form, used to fingerprint objects and to
     // compare gameplay objects before/after an operation. `ignoreGroups`
     // lets callers exclude group membership (e.g. the studio's tag group).
+    // Volatile keys (key::isVolatile) are never included.
     std::string canonical(bool ignoreGroups = false) const;
     uint64_t fingerprint(bool ignoreGroups = false) const;
 };

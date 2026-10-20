@@ -72,6 +72,16 @@ TEST_CASE("object: canonical form ignores key order and number formatting") {
     CHECK(c->fingerprint(true) == a->fingerprint(true));
 }
 
+TEST_CASE("object: the volatile key 155 is kept but not part of the fingerprint") {
+    // Strings as GD 2.2091 wrote them for the same object, at creation and after reload.
+    auto created = LevelObject::parse("1,1764,2,356.25,3,51,21,996,57,9995,128,0.563,129,0.563,155,34");
+    auto reloaded = LevelObject::parse("1,1764,2,356.25,3,51,57,9995,155,7,21,996,128,0.563,129,0.563");
+    CHECK(created && reloaded);
+    CHECK_EQ(created->fingerprint(), reloaded->fingerprint());
+    CHECK(created->serialize().find("155,34") != std::string::npos);  // preserved verbatim
+    CHECK(created->fingerprint() != LevelObject::parse("1,1764,2,356.25,3,52,21,996,57,9995,155,34")->fingerprint());
+}
+
 TEST_CASE("object: legacy uniform scale is mapped to X/Y") {
     auto o = LevelObject::parse("1,1,2,0,3,0,32,1.5");
     CHECK_NEAR(o->scaleX, 1.5, 1e-9);

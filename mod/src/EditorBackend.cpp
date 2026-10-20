@@ -197,8 +197,13 @@ void EditorBackend::showPreview(std::vector<gdds::LevelObject> const& add, std::
 
 void EditorBackend::clearPreview() {
     if (m_lel && m_lel->m_objects) {
-        for (auto& obj : m_previewObjects)
-            if (m_lel->m_objects->containsObject(obj)) m_lel->removeObject(obj, true);
+        size_t left = 0;
+        for (auto& obj : m_previewObjects) {
+            if (!m_lel->m_objects->containsObject(obj)) continue;
+            m_lel->removeObject(obj, true);
+            if (m_lel->m_objects->containsObject(obj)) ++left;
+        }
+        if (left) log::error("{} preview objects could not be removed from the level", left);
     }
     m_previewObjects.clear();
     for (auto& obj : m_previewHidden) obj->setVisible(true);

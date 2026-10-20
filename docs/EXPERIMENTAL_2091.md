@@ -1,6 +1,7 @@
 # Experimental build for GD 2.2091 (before Geode's official release)
 
-Status as of 2026-10-20: **built and verified outside the game, not installed, not tested in the game.**
+Status as of 2026-10-20: **installed and run once in the game; the bugs that first session revealed
+are fixed (see "First in-game session"), the fixed build has not been run in the game yet.**
 
 ## Why not with Geode 5.11.2
 
@@ -20,9 +21,21 @@ Status as of 2026-10-20: **built and verified outside the game, not installed, n
    `tools/experimental/sdkshim/volatileaccess.c` provides the only function it uses
    (`RtlSetVolatileMemory`, a memory fill made of volatile writes).
 2. **Mod**: built against that `v6` SDK and **the same revision** of the 2.2091 bindings as the
-   loader. Geode v6 replaces `std::filesystem::path` with `asp::fs::Path`: the mod's file access goes
-   through `mod/src/Files.hpp`, which compiles with both versions (the stable 2.2081 build is unchanged).
+   loader, with one fix (below). Geode v6 replaces `std::filesystem::path` with `asp::fs::Path`: the
+   mod's file access goes through `mod/src/Files.hpp`, which compiles with both versions (the stable
+   2.2081 build is unchanged).
 3. Command: `./tools/experimental/build_2091.ps1 -Part all` (prerequisites at the top of the script).
+
+### Bindings fix: `LevelEditorLayer::removeObject`
+
+The upstream 2.2091 bindings bind it to `0x223320`. That address is a real function start, but it
+is a level-statistics routine called only by `PlayLayer::onQuit` (it fills a dictionary with
+`id`, `uid`, `cs`, `sq`...). The real `removeObject(GameObject*, bool noUndo)` is `0x3f21b0`: null
+check, undo entry unless `noUndo` (`GameObjectCopy`, "Delete" command), `removeObjectFromSection`,
+`removeSpecial` — the same sequence as `EditorUI::onDeleteSelected`; it lies between the other
+`LevelEditorLayer` methods and is called by `breakApartTextObject`.
+`build_2091.ps1` patches a copy of the bindings, and `mod/CMakeLists.txt` refuses to build a 2.2091
+mod whose bindings still have the wrong address.
 
 ## Checks performed (without starting the game)
 
@@ -31,13 +44,32 @@ Status as of 2026-10-20: **built and verified outside the game, not installed, n
 | v6 loader built (`Geode.dll`, `Geode.lib`, `XInput1_4.dll`, `GeodeUpdater.exe`) | OK |
 | Mod built for `gd.win = 2.2091` | OK |
 | 3 `GameObject` offsets measured in the exe = the bindings' offsets (`static_assert`, `mod/src/LayoutChecks.cpp`) | OK |
-| 30 game functions used: exact function starts (`.pdata`), virtuals present in vtables (`tools/experimental/verify_addresses.py`) | 30/30 |
-| Compiled bindings = verified bindings (diff of the `.bro` files) | identical |
+| 31 game functions used: exact function starts (`.pdata`), virtuals present in vtables, address inside the range of the class's other methods (`tools/experimental/verify_addresses.py --bro ...`) | 31/31 (the upstream `removeObject` address is reported as an outlier) |
+| In the compiled mod: `removeObject` → `0x3f21b0` (no trace of `0x223320`), `customSetup` called through vtable slot `0x458` (the slot the game calls after `createWithKey`) | OK |
 | Mod imports from `Geode.dll` present in the built loader | 72/72 |
 | Mod imports from the installed game's `libcocos2d.dll` / `libExtensions.dll` / glew32 / fmod | 1092 + 171 + 2 + 9, 0 missing |
 | Loader delay-load imports from the game's `libcocos2d.dll` / `libExtensions.dll` | 1174 + 172, 0 missing |
 | Install then rollback on a **copy** of the game folder | identical to the start (SHA-256, 0 differences) |
-| Stable 2.2081 build + tests | 40/40 tests, mod packaged |
+| Stable 2.2081 build + tests | 43/43 tests, mod packaged |
+
+## First in-game session (2026-10-20)
+
+Worked: the v6 loader starts GD 2.2091, the mod loads, the studio window opens from the editor,
+generation creates objects, presets apply, the project is saved with the level.
+
+Found, from the screenshots and the Geode log, and fixed:
+
+| Problem | Cause | Fix |
+|---|---|---|
+| Regenerating left the old decoration in place (duplicates), cancelled previews stayed in the level | wrong upstream address of `removeObject` (above); it returned early, nothing was deleted. Only GD's normal save files changed during the session | correct address; the engine now re-reads the level after every removal and stops before creating anything if objects were not really deleted (`Studio::commit`, undo, redo, move) |
+| After reopening, every generated object counted as "hand-modified" | GD 2.2091 writes a key `155` whose value changes between creation and save/reload | key 155 is excluded from fingerprints; project files recompute fingerprints when loaded |
+| "Catalog verification looks unreliable (61 of 61 failed)" | the object type is set by `customSetup`, which a bare `createWithKey` does not run | call `customSetup` after `createWithKey`, as the game does for its toolbox icons |
+| Layer list: labels and toggles drawn on the row separators | row menus had their origin at the row's bottom edge instead of its middle | origin moved to the middle line |
+| "Studio" button drawn over the playtest button | fixed position | placed at runtime in the first spot no editor button covers |
+
+A level generated with the first build may contain duplicated decoration objects; they carry the
+studio's tag groups, so the fixed build recovers them into their layers and *Remove* / *Regenerate*
+deletes them.
 
 **Not verified**: actual behavior in the game (loader startup, editor, generation). Only a real
 launch will prove it.

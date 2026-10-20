@@ -12,8 +12,8 @@ the regular editor, and the level displays normally without the mod.
 | Engine (analysis, structural / lighting / artistic engines, layers, masks, palettes, presets, persistence, history, validation) | Implemented, **40 automated tests** (4,500 checks) passing |
 | Offline renderer using the game's real sprites | Implemented (`tools/render`), used to judge visual quality |
 | Geode mod (editor adapter + UI) | **Builds and packages** (`.geode`) for Geode 5.11.2 / GD 2.2081 |
-| Experimental GD 2.2091 build | **Builds** against Geode's `v6` development branch, verified offline (addresses, imports, field offsets). See `docs/EXPERIMENTAL_2091.md` |
-| Running in the game | **Not tested yet.** GD 2.2091 (Steam build of 2026-10-17) is not supported by a released Geode: the 5.11.2 loader refuses 2.2081 mods in "forward compatibility" mode. See `docs/LIMITATIONS.md` and `docs/TESTING.md` |
+| Experimental GD 2.2091 build | **Builds** against Geode's `v6` development branch with one bindings fix, verified offline (addresses, imports, field offsets). See `docs/EXPERIMENTAL_2091.md` |
+| Running in the game | **First session done with the experimental 2.2091 build**: the studio opens and generates; the bugs it revealed (deletion, layer list layout, button position, object recognition after reload) are fixed but the fixed build is not tested in the game yet. No released Geode supports GD 2.2091 (Steam build of 2026-10-17). See `docs/EXPERIMENTAL_2091.md` and `docs/LIMITATIONS.md` |
 
 ## Layout
 

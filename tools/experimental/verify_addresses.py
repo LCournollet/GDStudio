@@ -3,6 +3,15 @@
 For every address: it must be the exact start of a function in the exe's .pdata
 (exception directory). Virtual functions must also appear as a pointer in a
 vtable (.rdata). Read-only: the exe is only read.
+
+Being a function start is not enough: upstream bound LevelEditorLayer::removeObject
+to 0x223320, a real function start that is in fact a level-statistics routine
+called only by PlayLayer::onQuit. With `--bro <GeometryDash.bro>`, every address
+is also compared with the other functions bound for the same class: a class's
+methods are laid out together in the executable, so an address far from all of
+them is reported as an OUTLIER (that check flags 0x223320, not 0x3f21b0).
+
+Usage: python verify_addresses.py [--bro <bindings>/bindings/2.2091/GeometryDash.bro]
 """
 import struct
 import sys
@@ -26,7 +35,10 @@ USED = {
     "EditorUI::getSelectedObjects": (0x1c9630, False),
     "EditorUI::selectObjects": (0x1c8500, False),
     "LevelEditorLayer::createObjectsFromString": (0x3f0150, False),
-    "LevelEditorLayer::removeObject": (0x223320, False),
+    # 0x3f21b0, not the upstream 0x223320: null check, undo entry unless noUndo,
+    # removeObjectFromSection, removeSpecial (what EditorUI::onDeleteSelected does).
+    "LevelEditorLayer::removeObject": (0x3f21b0, False),
+    "GameObject::customSetup": (0x28e020, True),
     "LevelEditorLayer::transferDefaultColors": (0x3fa630, False),
     "LevelEditorLayer::updateObjectColors": (0x3f7460, False),
     "GameObject::getSaveString": (0x29c200, True),
@@ -45,7 +57,37 @@ USED = {
 }
 
 
+def class_addresses(bro_path):
+    """win addresses bound in a .bro file, grouped by class."""
+    import re
+    out = {}
+    cls = None
+    for line in open(bro_path, encoding="utf-8"):
+        m = re.match(r"\s*class\s+([\w:]+)", line)
+        if m:
+            cls = m.group(1)
+            continue
+        w = re.search(r"\)[^=;{]*=\s*[^;]*?win\s+(0x[0-9a-f]+)", line)
+        if w and cls:
+            a = int(w.group(1), 16)
+            if a != 0x9999999:
+                out.setdefault(cls, []).append(a)
+    return {c: sorted(v) for c, v in out.items()}
+
+
+def is_outlier(rva, addrs):
+    """True when `rva` lies outside its class's bulk and far from every other method."""
+    others = [a for a in addrs if a != rva]
+    if len(others) < 5:
+        return False
+    p10, p90 = others[len(others) // 10], others[(len(others) * 9) // 10]
+    nearest = min(abs(a - rva) for a in others)
+    return not (p10 - 0x8000 <= rva <= p90 + 0x8000) and nearest >= 0x2000
+
+
 def main():
+    bro = sys.argv[sys.argv.index("--bro") + 1] if "--bro" in sys.argv else None
+    classes = class_addresses(bro) if bro else {}
     data = open(EXE, "rb").read()
     pe = struct.unpack_from("<I", data, 0x3C)[0]
     nsec = struct.unpack_from("<H", data, pe + 6)[0]
@@ -87,6 +129,12 @@ def main():
                 bad += 1
         if not ok_start:
             bad += 1
+        cls = name.split("::")[0]
+        if cls in classes:
+            outlier = is_outlier(rva, classes[cls])
+            line += "   class range: " + ("OUTLIER" if outlier else "ok")
+            if outlier:
+                bad += 1
         print(line)
     print("RESULT:", "all addresses plausible" if bad == 0 else f"{bad} suspicious")
     return 1 if bad else 0

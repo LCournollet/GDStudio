@@ -4,11 +4,34 @@
 #include "StudioPopup.hpp"
 #include "Widgets.hpp"
 
+#include <algorithm>
+#include <cmath>
+
 using namespace geode::prelude;
 
 namespace {
 Toolbar* g_toolbar = nullptr;
+
+CCRect worldRect(CCNode* node) {
+    auto bb = node->boundingBox();
+    auto parent = node->getParent();
+    if (!parent) return bb;
+    auto a = parent->convertToWorldSpace(bb.origin);
+    auto b = parent->convertToWorldSpace({bb.getMaxX(), bb.getMaxY()});
+    return CCRect(std::min(a.x, b.x), std::min(a.y, b.y), std::abs(b.x - a.x), std::abs(b.y - a.y));
 }
+
+// Screen rectangles of every visible button / slider below `node`.
+void collectButtons(CCNode* node, CCNode* skip, std::vector<CCRect>& out) {
+    if (!node || node == skip || !node->isVisible()) return;
+    if (geode::cast::typeinfo_cast<CCMenuItem*>(node) || geode::cast::typeinfo_cast<Slider*>(node)) {
+        auto r = worldRect(node);
+        if (r.size.width > 1 && r.size.height > 1) out.push_back(r);
+        return;
+    }
+    for (auto child : CCArrayExt<CCNode*>(node->getChildren())) collectButtons(child, skip, out);
+}
+}  // namespace
 
 Toolbar* Toolbar::create() {
     auto ret = new Toolbar();
@@ -31,7 +54,35 @@ bool Toolbar::init() {
     this->addChild(m_hint);
     refresh();
     this->schedule(schedule_selector(Toolbar::tick), 0.1f);
+    // The editor finishes laying out its buttons after EditorUI::init.
+    this->scheduleOnce(schedule_selector(Toolbar::placeOnce), 0.f);
     return true;
+}
+
+void Toolbar::placeOnce(float) { placeClearOfEditorButtons(); }
+
+void Toolbar::placeClearOfEditorButtons() {
+    auto parent = this->getParent();
+    if (!parent || !m_menu || !m_menu->getChildrenCount()) return;
+    std::vector<CCRect> taken;
+    collectButtons(parent, this, taken);
+    // Size of the always-present "Studio" button.
+    auto studio = static_cast<CCNode*>(m_menu->getChildren()->objectAtIndex(0));
+    float w = studio->getScaledContentSize().width, h = studio->getScaledContentSize().height;
+    auto win = CCDirector::sharedDirector()->getWinSize();
+    float margin = 4.f;
+    float lowest = win.height * 0.3f;  // stay above the object panel
+    for (float x : {8.f, 70.f, 130.f}) {
+        for (float y = win.height - h / 2 - margin; y >= lowest; y -= 2.f) {
+            CCRect r(x - margin, y - h / 2 - margin, w + 2 * margin, h + 2 * margin);
+            bool clear = std::none_of(taken.begin(), taken.end(), [&](CCRect const& t) { return t.intersectsRect(r); });
+            if (!clear) continue;
+            this->setPosition(parent->convertToNodeSpace({x, y}));
+            log::info("Toolbar placed at ({:.0f}, {:.0f}), clear of {} editor buttons", x, y, taken.size());
+            return;
+        }
+    }
+    log::warn("No free spot found for the toolbar among {} editor buttons; keeping its default position", taken.size());
 }
 
 void Toolbar::tick(float) {
