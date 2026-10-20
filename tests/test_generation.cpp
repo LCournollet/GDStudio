@@ -362,6 +362,85 @@ TEST_CASE("generation K: hand-edited objects are kept (Keep) or replaced (Replac
     CHECK(!stillThere);
 }
 
+TEST_CASE("generation K: a hand edit stays protected after reopening the level several times") {
+    auto lvl = makeTestLevel("K").level;
+    StringLevelBackend b(lvl);
+    Studio studio(b);
+    studio.attach(presetProject());
+    CHECK(studio.run({}).ok);
+    auto outlineId = layerIdOf(studio.project(), LayerKind::Outline);
+    int tag = studio.project().layers.find(outlineId)->tagGroup;
+    for (auto& o : b.level().objects)
+        if (o.hasGroup(tag)) { o.pos.x += 7; break; }
+    CHECK_EQ(studio.attach(studio.project()).modified, 1);
+    // Save / reopen twice: the edit is now an exact match of its record.
+    for (int i = 0; i < 2; ++i) {
+        auto saved = studio.project().toJson().dump();
+        auto rep = studio.attach(Project::fromJson(*json::parse(saved)));
+        CHECK_EQ(rep.modified, 0);
+    }
+    GenerationRequest req;
+    req.mode = OperationMode::Regenerate;
+    req.layers = {outlineId};
+    auto out = studio.run(req);
+    CHECK(out.ok);
+    CHECK_EQ(out.keptModified, 1);
+}
+
+TEST_CASE("generation: recovered objects are replaced by a regeneration, not duplicated") {
+    auto lvl = makeTestLevel("G").level;
+    StringLevelBackend clean(lvl);
+    Studio reference(clean);
+    reference.attach(presetProject());
+    CHECK(reference.run({}).ok);
+    size_t cleanCount = clean.level().objects.size();
+
+    // Same level whose project file was lost: every studio object comes back
+    // as "recovered" from its tag group.
+    StringLevelBackend b(Level::parse(clean.level().serialize()));
+    Studio studio(b);
+    auto p = Project::fromJson(*json::parse(reference.project().toJson().dump()));
+    p.records.clear();
+    auto rep = studio.attach(p);
+    CHECK(rep.recovered > 300);
+    GenerationRequest req;
+    req.mode = OperationMode::Regenerate;
+    auto out = studio.run(req);
+    CHECK(out.ok);
+    CHECK_EQ(out.keptModified, 0);
+    CHECK_EQ(size_t(out.removed), size_t(rep.recovered));
+    CHECK_EQ(b.level().objects.size(), cleanCount);  // no second copy on top
+
+    // Projects written by 0.1.0 stored them as "modified": they are migrated.
+    auto old = json::parse(R"({"uid":"7","layer":"l","op":"recovered","key":"0","fp":"0","obj":"1,1,2,0,3,0","ax":0,"ay":0,"state":"modified"})");
+    CHECK(GeneratedRecord::fromJson(*old).state == RecordState::Recovered);
+}
+
+TEST_CASE("generation: switching a layer off clears its objects, locking keeps them") {
+    auto lvl = makeTestLevel("G").level;
+    StringLevelBackend b(lvl);
+    Studio studio(b);
+    studio.attach(presetProject());
+    CHECK(studio.run({}).ok);
+    auto counts = studio.project().objectCountByLayer();
+    auto glowId = layerIdOf(studio.project(), LayerKind::StructuralGlow);
+    auto bgId = layerIdOf(studio.project(), LayerKind::BackgroundDetails);
+    CHECK(counts[glowId] > 0);
+    CHECK(counts[bgId] > 0);
+    studio.project().layers.find(glowId)->enabled = false;
+    studio.project().layers.find(bgId)->enabled = false;
+    studio.project().layers.find(bgId)->locked = true;
+    GenerationRequest req;
+    req.mode = OperationMode::Regenerate;
+    auto out = studio.run(req);
+    CHECK(out.ok);
+    auto after = studio.project().objectCountByLayer();
+    CHECK_EQ(after[glowId], 0);              // off: its previous objects are gone
+    CHECK_EQ(after[bgId], counts[bgId]);     // off but locked: untouched
+    int glowTag = studio.project().layers.find(glowId)->tagGroup;
+    for (auto& o : b.level().objects) CHECK(!o.hasGroup(glowTag));
+}
+
 TEST_CASE("generation L: removing everything restores the exact gameplay") {
     auto lvl = makeTestLevel("L").level;
     auto original = canonicalSet(lvl.objects, [](auto&) { return true; });

@@ -19,11 +19,16 @@ The project is only used for advanced editing and regeneration.
 Every registry record keeps the exact fingerprint (canonical form) of the object it created.
 When the editor opens:
 
-1. identical fingerprint → object **linked**;
+1. identical fingerprint → object **linked** (a record already marked as edited by hand stays so:
+   the protection of hand edits survives any number of reopenings);
 2. object carrying a tag group without an identical fingerprint → **edited by hand** (attached to
-   the closest record of the same layer and the same ID);
+   the closest record of the same layer and the same ID); the *Keep* / *Ask* policies protect it;
 3. record without an object → **deleted by hand** (or undone with GD's undo); the record is removed;
-4. object carrying a tag group without a record → **recovered** into its layer.
+4. object carrying a tag group without a record → **recovered** into its layer. It is a studio
+   object, so the next regeneration of its layer replaces it like any other (it is not treated as a
+   hand edit, which would leave it under the new decoration).
+
+The fingerprint ignores keys the game rewrites on its own (key `155` in GD 2.2091).
 
 Case 4 keeps the system robust even if the project file is lost: layer membership is rebuilt from
 the tag groups.

@@ -71,6 +71,22 @@ A level generated with the first build may contain duplicated decoration objects
 studio's tag groups, so the fixed build recovers them into their layers and *Remove* / *Regenerate*
 deletes them.
 
+## Second in-game session (2026-10-20)
+
+Confirmed in the game: the toolbar placed itself clear of the editor's 138 buttons; the catalog
+check ran (61 checked); reopening linked all 115 objects of the project with 0 false hand edits and
+recovered the 172 leftovers of the first build; regenerating removed 238 objects and created 80.
+The saved level was consistent (129 studio objects, 129 records, every record matching its object).
+
+Found and fixed:
+
+| Problem | Cause | Fix |
+|---|---|---|
+| After applying *Dark Tech*, layers it switches off (atmosphere, highlights, ambient glow) kept the previous preset's objects, including first-build duplicates | a switched-off layer was skipped entirely | a layer that is off produces nothing: generation removes its previous objects (a locked layer still keeps them) |
+| Recovered objects were never replaced | they were recorded as hand edits, which *Keep* protects | own *recovered* state, replaced like any studio object; old projects are migrated |
+| A real hand edit lost its protection after the second reopening | an exact match reset the record to *linked* | the record keeps its *modified* state |
+| Object 507 (2-unit outline) disabled, leaving the Outlines layer empty | its type is set by `setupCustomSprites` when placed; the startup check read the default 0 | type 0 is checked on the created objects instead (see LIMITATIONS) |
+
 **Not verified**: actual behavior in the game (loader startup, editor, generation). Only a real
 launch will prove it.
 

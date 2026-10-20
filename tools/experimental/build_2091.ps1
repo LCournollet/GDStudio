@@ -20,6 +20,10 @@ param(
     [string] $BuildRoot = "$env:LOCALAPPDATA\gdds-build\exp2091"
 )
 $ErrorActionPreference = "Continue"
+# Environment variables are process-wide: put them back on exit so a later build in the same
+# shell (e.g. scripts/build.ps1 for 2.2081) does not pick up this SDK or these bindings.
+$envBefore = [Environment]::GetEnvironmentVariables("Process")
+try {
 $root = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 if (-not (Test-Path "$Sdk\VERSION")) { throw "Geode v6 SDK not found in $Sdk" }
 New-Item -ItemType Directory -Force $BuildRoot | Out-Null
@@ -108,5 +112,12 @@ if (-not $failed -and $Part -in @("mod", "all")) {
     "mod: exit $LASTEXITCODE (log: $log)"
     if ($LASTEXITCODE -ne 0) { $failed = $true; Show-Log $log "error C|error:|fatal error|FAILED|LNK" }
     else { "  $modBuild\mod\toyger.gd-decoration-studio.geode" }
+}
+}
+finally {
+    foreach ($k in @([Environment]::GetEnvironmentVariables("Process").Keys)) {
+        if (-not $envBefore.Contains($k)) { [Environment]::SetEnvironmentVariable($k, $null, "Process") }
+    }
+    foreach ($k in $envBefore.Keys) { [Environment]::SetEnvironmentVariable($k, $envBefore[$k], "Process") }
 }
 if ($failed) { exit 1 }

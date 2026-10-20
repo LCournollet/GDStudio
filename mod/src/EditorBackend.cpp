@@ -82,6 +82,31 @@ std::vector<std::string> EditorBackend::createObjects(std::vector<gdds::LevelObj
         createdParsed[j] = gdds::LevelObject::parse(createdStr[j]);
     }
     std::vector<char> used(created.size(), 0);
+
+    // Authoritative safety check, on the objects as the game really built
+    // them (types can be assigned late, e.g. by setupCustomSprites): anything
+    // that is not a decoration is removed at once and reported, so it never
+    // stays in the level. If most objects fail together, the field read itself
+    // is unreliable and the check is skipped.
+    std::vector<size_t> notDeco;
+    for (size_t j = 0; j < created.size(); ++j)
+        if (static_cast<int>(created[j]->m_objectType) != static_cast<int>(GameObjectType::Decoration)) notDeco.push_back(j);
+    if (!notDeco.empty() && notDeco.size() * 3 <= created.size()) {
+        std::set<int> ids;
+        for (size_t j : notDeco) {
+            if (createdParsed[j]) ids.insert(createdParsed[j]->id);
+            m_lel->removeObject(created[j], true);
+            used[j] = 1;  // never reported as created
+        }
+        for (int id : ids) {
+            log::warn("Object {} is not a decoration once placed in this game version: removed and disabled", id);
+            if (onNotDecoration) onNotDecoration(id);
+        }
+    }
+    else if (!notDeco.empty()) {
+        log::warn("Type check of created objects looks unreliable ({} of {} not decorations): ignored", notDeco.size(),
+                  created.size());
+    }
     auto matches = [&](size_t j, gdds::LevelObject const& want) {
         auto& p = createdParsed[j];
         return p && p->id == want.id && std::abs(p->pos.x - want.pos.x) < 0.01 && std::abs(p->pos.y - want.pos.y) < 0.01;

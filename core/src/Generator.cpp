@@ -131,19 +131,13 @@ ZSlot Generator::autoZ(LayerKind kind, LevelAnalysis const& a) {
 }
 
 std::vector<std::string> Generator::resolveLayers(Project const& project, GenerationRequest const& request,
-                                                  std::vector<std::string>* skippedLocked) const {
+                                                  std::vector<std::string>* skippedLocked,
+                                                  std::vector<std::string>* clearOnly) const {
     std::vector<std::string> ids;
     auto& stack = project.layers;
     if (request.layers.empty()) {
-        for (auto& id : stack.displayOrder()) {
-            auto l = stack.find(id);
-            bool parentsEnabled = true;
-            for (auto p = l; p && !p->parentId.empty(); p = stack.find(p->parentId))
-                if (auto pp = stack.find(p->parentId); pp && !pp->enabled) parentsEnabled = false;
-            if (!l->enabled || !parentsEnabled || l->kind == LayerKind::Group) continue;
-            if (!engineEnabled(engineOf(l->kind), project.settings)) continue;
-            ids.push_back(id);
-        }
+        for (auto& id : stack.displayOrder())
+            if (stack.find(id)->kind != LayerKind::Group) ids.push_back(id);
     }
     else {
         for (auto& req : request.layers)
@@ -159,6 +153,14 @@ std::vector<std::string> Generator::resolveLayers(Project const& project, Genera
             if (skippedLocked) skippedLocked->push_back(id);
             continue;
         }
+        auto l = stack.find(id);
+        bool on = l->enabled && engineEnabled(engineOf(l->kind), project.settings);
+        for (auto p = l; on && p && !p->parentId.empty(); p = stack.find(p->parentId))
+            if (auto pp = stack.find(p->parentId); pp && !pp->enabled) on = false;
+        if (!on) {
+            if (clearOnly) clearOnly->push_back(id);
+            continue;
+        }
         out.push_back(id);
     }
     return out;
@@ -168,7 +170,10 @@ GenerationResult Generator::run(Project const& project, LevelAnalysis const& ana
                                 std::atomic<bool> const* cancel) const {
     auto t0 = std::chrono::steady_clock::now();
     GenerationResult result;
-    auto layerIds = resolveLayers(project, request, &result.skippedLocked);
+    std::vector<std::string> clearOnly;
+    auto layerIds = resolveLayers(project, request, &result.skippedLocked, &clearOnly);
+    std::set<std::string> produceNothing(clearOnly.begin(), clearOnly.end());
+    layerIds.insert(layerIds.end(), clearOnly.begin(), clearOnly.end());
     auto plan = CompositionPlan::build(analysis, project.settings.globalSeed, project.settings.globalDensity);
     ModifiedPolicy policy = request.modifiedPolicy.value_or(project.settings.modifiedPolicy);
 
@@ -208,7 +213,7 @@ GenerationResult Generator::run(Project const& project, LevelAnalysis const& ana
             result.removeRecords.push_back(rec->uid);
             ls.removed++;
         }
-        if (request.mode == OperationMode::Remove) {
+        if (request.mode == OperationMode::Remove || produceNothing.count(layerId)) {
             result.layerStats.push_back(ls);
             continue;
         }

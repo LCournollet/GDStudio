@@ -60,12 +60,14 @@ char const* stateName(RecordState s) {
         case RecordState::Linked: return "linked";
         case RecordState::Modified: return "modified";
         case RecordState::Missing: return "missing";
+        case RecordState::Recovered: return "recovered";
     }
     return "linked";
 }
 RecordState stateFromName(std::string const& n) {
     if (n == "modified") return RecordState::Modified;
     if (n == "missing") return RecordState::Missing;
+    if (n == "recovered") return RecordState::Recovered;
     return RecordState::Linked;
 }
 json::Value stringArray(std::vector<std::string> const& v) {
@@ -107,6 +109,9 @@ GeneratedRecord GeneratedRecord::fromJson(json::Value const& v) {
     if (auto o = LevelObject::parse(r.objectString)) r.fingerprint = o->fingerprint();
     r.anchor = {v.num("ax"), v.num("ay")};
     r.state = stateFromName(v.str("state"));
+    // Projects written by 0.1.0 stored recovered objects as "modified", which
+    // protected them from regeneration forever.
+    if (r.operationId == "recovered" && r.state == RecordState::Modified) r.state = RecordState::Recovered;
     return r;
 }
 
@@ -228,7 +233,10 @@ ReconcileReport Project::reconcile(std::vector<LevelObject> const& objects) {
             if (claimed[it->second]) continue;
             claimed[it->second] = 1;
             liveMatched[li] = 1;
-            records[it->second].state = RecordState::Linked;
+            // A hand-modified or recovered record keeps its state: its string
+            // already is the edited object, so an exact match says nothing new.
+            auto& state = records[it->second].state;
+            if (state == RecordState::Missing) state = RecordState::Linked;
             rep.liveToRecord[li] = records[it->second].uid;
             rep.linked++;
             break;
@@ -271,7 +279,7 @@ ReconcileReport Project::reconcile(std::vector<LevelObject> const& objects) {
             r.objectString = o.serialize();
             r.fingerprint = o.fingerprint();
             r.anchor = o.pos;
-            r.state = RecordState::Modified;
+            r.state = RecordState::Recovered;
             recovered.push_back(std::move(r));
             rep.recovered++;
             rep.liveToRecord[li] = 0;  // fixed below

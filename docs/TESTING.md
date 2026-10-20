@@ -28,7 +28,7 @@ The test levels are in `core/src/TestLevels.cpp` (`gdds-cli testlevel A..L file.
 | Safety | `rolls the operation back` | a backend that alters the gameplay triggers a full rollback |
 | Colors | `changing intensity` | a layer's intensity only changes the opacity of its channels |
 
-Current result: **43 tests, 4,525 checks, 0 failures.** Since the first in-game session they also cover a game that does not really delete objects (the operation must stop without duplicating anything) and GD 2.2091 renumbering key 155 between creation and reload.
+Current result: **46 tests, 6,188 checks, 0 failures.** Since the first in-game session they also cover a game that does not really delete objects (the operation must stop without duplicating anything) GD 2.2091 renumbering key 155 between creation and reload, hand edits staying protected after several reopenings, recovered objects being replaced instead of duplicated, and layers switched off being cleared while locked ones are kept.
 
 Offline visual checks: `tools/render/render.py` (rendering with the game's sprites).
 Performance measured on a real 115,969-object level (read-only export): analysis 0.22 s, Dark Tech

@@ -55,7 +55,12 @@ struct GenerationSettings {
     static GenerationSettings fromJson(json::Value const& v);
 };
 
-enum class RecordState : uint8_t { Linked, Modified, Missing };
+// Linked: the object is exactly what the studio created.
+// Modified: the user changed it by hand (protected by the Keep / Ask policies).
+// Recovered: a studio object (it carries a layer's tag group) found without a
+//   record, e.g. after the project file was lost; regenerating replaces it.
+// Missing: the object was deleted by hand (dropped after reconciliation).
+enum class RecordState : uint8_t { Linked, Modified, Missing, Recovered };
 
 struct GeneratedRecord {
     uint64_t uid = 0;

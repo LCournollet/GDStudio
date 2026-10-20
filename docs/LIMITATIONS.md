@@ -39,9 +39,13 @@ This document lists, honestly, what is not guaranteed or not verified yet.
 - **Touch priorities** of the toolbar and the mask tool in the editor. The toolbar's position is
   chosen at runtime clear of the editor's buttons (logged as `Toolbar placed at (x, y)`).
 - **Visibility of hidden layers**: reapplied after every `updateVisibility` of the editor.
-- **Catalog check at startup**: creates every catalog object, runs its `customSetup` (as the game
-  does for its toolbox icons) and reads its type; if more than a
-  third of the checks fail (unreliable field read), the check is skipped.
+- **Object type checks**: at startup every catalog object is created and set up as the game does
+  for its toolbox icons (`createWithKey` + `customSetup`) and disabled if it gets a gameplay type.
+  Type 0 (Solid) is also the constructor default, and some decorations only get their type once
+  placed in a level (`setupCustomSprites`, e.g. object 507), so those are checked again on every
+  object actually created: anything the game does not treat as a decoration is removed at once and
+  disabled. In both checks, if more than a third fail together (unreliable field read), the check
+  is skipped.
 
 ## Gameplay safety: what is guaranteed, what is not
 

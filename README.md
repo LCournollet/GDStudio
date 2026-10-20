@@ -67,7 +67,7 @@ python tools/levels/gdsave.py export "Level name" my_level.txt
 1. Open a level in the editor: a **Studio** button appears at the top left (or press **Alt+D**).
 2. **Presets**: pick a style (Modern Glow, Minimal, Dark Tech, Neon, Industrial, Cyberpunk, Abstract).
 3. **Objects / Colors**: choose objects and colors, globally or per layer.
-4. **Layers**: tune each layer (density, complexity, intensity, scale, opacity, seed, style, Z, mask edge policy); lock / hide / rename / duplicate / create sub-layers.
+4. **Layers**: tune each layer (density, complexity, intensity, scale, opacity, seed, style, Z, mask edge policy); lock / hide / rename / duplicate / create sub-layers. *Lock* keeps a layer's objects untouched; switching a layer *off* means it produces nothing, so the next generation removes its previous objects (e.g. layers a preset turns off).
 5. **Masks**: draw rectangles, polygons, brush strokes, X sections, or build a mask from the selected structures; include or exclude.
 6. **Generate**: *Preview* (proposed objects outlined in cyan, Apply / Cancel in the toolbar), then *Generate* / *Regenerate* / *Remove*.
 7. Adjust a layer (e.g. glow intensity: applied live, no regeneration), regenerate a single layer or a single zone.

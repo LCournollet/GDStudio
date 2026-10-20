@@ -11,6 +11,7 @@
 #include <Geode/Geode.hpp>
 #include <gdds/Studio.hpp>
 
+#include <functional>
 #include <set>
 #include <unordered_map>
 #include <vector>
@@ -47,6 +48,11 @@ public:
     std::vector<gdds::LevelObject> selectedObjects();
     // Selects every live object carrying one of these groups.
     int selectObjectsWithGroups(std::set<int> const& groups);
+
+    // Called with the id of every created object that the game does not treat
+    // as a decoration once it is really in the level (the object is removed
+    // again before createObjects returns).
+    std::function<void(int)> onNotDecoration;
 
 private:
     struct Live {

@@ -90,9 +90,13 @@ public:
     GenerationResult run(Project const& project, LevelAnalysis const& analysis, GenerationRequest const& request,
                          std::atomic<bool> const* cancel = nullptr) const;
 
-    // Layers a request applies to (groups expanded, locked/disabled filtered).
+    // Layers a request applies to (groups expanded, locked layers filtered out).
+    // Layers that are switched off (or whose parent group or engine is) produce
+    // nothing: they are listed in `clearOnly`, so an operation removes their
+    // previous objects instead of leaving another style's decoration behind.
     std::vector<std::string> resolveLayers(Project const& project, GenerationRequest const& request,
-                                           std::vector<std::string>* skippedLocked = nullptr) const;
+                                           std::vector<std::string>* skippedLocked = nullptr,
+                                           std::vector<std::string>* clearOnly = nullptr) const;
 
     // Default draw slot of a layer kind relative to the level's gameplay.
     static ZSlot autoZ(LayerKind kind, LevelAnalysis const& analysis);

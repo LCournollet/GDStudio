@@ -103,6 +103,10 @@ void StudioSession::end() {
 StudioSession::StudioSession(LevelEditorLayer* lel, EditorUI* ui) : m_lel(lel), m_catalog(gdds::DecoCatalog::builtin()) {
     for (int id : g_disabledIds) m_catalog.disable(id);
     m_backend = std::make_unique<EditorBackend>(lel, ui);
+    m_backend->onNotDecoration = [this](int id) {
+        if (std::find(g_disabledIds.begin(), g_disabledIds.end(), id) == g_disabledIds.end()) g_disabledIds.push_back(id);
+        m_catalog.disable(id);
+    };
     m_studio = std::make_unique<gdds::Studio>(*m_backend, m_catalog);
     m_maskTool = std::make_unique<MaskTool>(this);
 }
@@ -110,21 +114,27 @@ StudioSession::StudioSession(LevelEditorLayer* lel, EditorUI* ui) : m_lel(lel), 
 void StudioSession::verifyCatalog() {
     if (g_catalogVerified || !Mod::get()->getSettingValue<bool>("verify-catalog")) return;
     g_catalogVerified = true;
-    // Instantiate every curated object once and check the game reports it as a
-    // pure decoration. If most checks fail at once, the check itself is not
-    // reliable on this game version (layout mismatch): do not trust it.
+    // Instantiate every curated object once, the way the editor builds its
+    // toolbox icons (createWithKey + customSetup), and disable any id the game
+    // gives a gameplay type. Type 0 (Solid) is also the constructor default:
+    // some decorations only get their type later, from setupCustomSprites when
+    // they are placed in a level (e.g. 507), so an id reading 0 here is left to
+    // the check EditorBackend::createObjects runs on the objects actually
+    // created. If most checks fail at once, the check itself is not reliable on
+    // this game version (layout mismatch): do not trust it.
     std::vector<int> failed;
-    int checked = 0;
+    int checked = 0, deferred = 0;
     for (auto& def : m_catalog.all()) {
         if (def.hasTag("library")) continue;
         auto obj = GameObject::createWithKey(def.id);
         ++checked;
-        // The type is assigned by customSetup, which the game itself calls right
-        // after createWithKey for standalone objects (EditorUI::getCreateBtn,
-        // LevelEditorLayer::createObject); a bare createWithKey still says Solid.
         if (obj) obj->customSetup();
-        if (!obj || static_cast<int>(obj->m_objectType) != static_cast<int>(GameObjectType::Decoration)) failed.push_back(def.id);
+        int type = obj ? static_cast<int>(obj->m_objectType) : -1;
+        if (type == static_cast<int>(GameObjectType::Decoration)) continue;
+        if (type == static_cast<int>(GameObjectType::Solid)) { ++deferred; continue; }
+        failed.push_back(def.id);
     }
+    if (deferred) log::info("Catalog verification: {} objects only get their type once placed; checked at creation", deferred);
     if (checked > 0 && failed.size() * 3 > size_t(checked)) {
         log::warn("Catalog verification looks unreliable on this game version ({} of {} failed): ignored", failed.size(),
                   checked);
