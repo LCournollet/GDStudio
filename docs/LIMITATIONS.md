@@ -1,73 +1,74 @@
-# Limites connues et décisions
+# Known limitations and decisions
 
-Ce document liste honnêtement ce qui n'est pas garanti ou pas encore vérifié.
+This document lists, honestly, what is not guaranteed or not verified yet.
 
-## Version du jeu et de Geode (bloquant pour les tests en jeu)
+## Game and Geode versions (blocking for in-game tests)
 
-- GD installé : **2.2091** (Steam, PE du 17/10/2026). Geode installé : **5.11.2**, qui cible
-  **2.2081** et tourne en *forward compatibility mode* : dans ce mode, le loader **refuse** tout mod
-  déclarant `gd: 2.2081` (c'est le cas de ce mod et aussi de `geode.node-ids`).
-- Le mod est compilé contre le SDK 5.11.2 / GD 2.2081 : il ne peut donc pas être chargé dans ton
-  jeu actuel. **Aucun comportement en jeu n'a été observé.** Dès que Geode publie la prise en charge
-  de 2.2091 : mettre à jour le SDK et le loader, compiler avec `-GdVersion 2.2091`, tester.
-- Les bindings 2.2091 publiés (`geode-sdk/bindings`, branche `main`, 19/10/2026) **ne compilent
-  avec aucun SDK Geode publié** : ni la 5.11.2, ni la branche `main` du SDK (il manque les en-têtes
-  cocos de 2.2091 `CCTouchClipper.h` / `CCKeyboardActionManager.h`, et des signatures changent).
-  L'échec se produit dans la bibliothèque de bindings de Geode elle-même, avant notre code. Vérifié
-  le 19/10/2026 sans rien installer dans le jeu. Conclusion : aucun mod ne peut encore cibler 2.2091 ;
-  il faut attendre la publication officielle.
-- Toutes les fonctions du jeu utilisées par le mod ont une adresse Windows dans les bindings
-  2.2081 **et** 2.2091 (vérifié dans les fichiers broma). L'adaptateur évite volontairement
-  `getLevelString`, `EditButtonBar::create`, `LevelSettingsObject::create`, `undoLastAction` de
-  l'UI, et la dépendance à `node-ids`, absents ou cassés en 2.2091.
+- Installed GD: **2.2091** (Steam, PE timestamp 2026-10-17). Installed Geode: **5.11.2**, which
+  targets **2.2081** and runs in *forward compatibility mode*: in that mode the loader **refuses**
+  every mod declaring `gd: 2.2081` (this mod, and also `geode.node-ids`).
+- The stable build is compiled against SDK 5.11.2 / GD 2.2081, so it cannot load in GD 2.2091.
+  **No in-game behavior has been observed.** Once Geode officially supports 2.2091: update the SDK
+  and the loader, build with `-GdVersion 2.2091`, test (`docs/GEODE_UPDATE.md`).
+- The published 2.2091 bindings (`geode-sdk/bindings`, `main`) **do not compile with any released
+  Geode SDK**: neither 5.11.2 nor the SDK's `main` branch (the 2.2091 cocos headers
+  `CCTouchClipper.h` / `CCKeyboardActionManager.h` are missing and signatures changed). The failure
+  happens in Geode's own bindings library, before this mod's code.
+- They do compile with Geode's **`v6` development branch**, which natively targets 2.2091. An
+  experimental build (loader built from source + this mod) exists and passes every offline check,
+  but has **not been run in the game**: see `docs/EXPERIMENTAL_2091.md`.
+- Every game function used by the mod has a Windows address in the 2.2081 **and** 2.2091 bindings
+  (checked in the broma files), and the 2.2091 addresses were checked against the installed
+  executable. The adapter deliberately avoids `getLevelString`, `EditButtonBar::create`,
+  `LevelSettingsObject::create`, the UI's `undoLastAction`, `EditorPauseLayer::saveLevel` and the
+  `node-ids` dependency, which are missing or broken in 2.2091.
 
-## Points non vérifiés dans le jeu (à tester en priorité)
+## Not verified in the game (test these first)
 
-- **Rafraîchissement des couleurs** après écriture des canaux (`ColorAction::setupFromString`,
-  `transferDefaultColors`, `updateObjectColors`) : la séquence exacte qui rafraîchit l'éditeur n'est
-  pas documentée ; si les couleurs n'apparaissent qu'après réouverture du niveau, c'est ce point.
-- **Décalage vertical** entre coordonnées du niveau et nœuds de l'éditeur : mesuré automatiquement
-  sur un objet (pas codé en dur) ; utilisé seulement pour dessiner les masques et l'overlay.
-- **Priorités tactiles** de la barre d'outils et de l'outil de masques dans l'éditeur.
-- **Visibilité des couches masquées** : réappliquée après chaque `updateVisibility` de l'éditeur.
-- **Vérification du catalogue au démarrage** : crée chaque objet du catalogue et lit son type ; si
-  plus d'un tiers des contrôles échouent (lecture de champ non fiable), la vérification est ignorée.
+- **Color refresh** after writing the channels (`ColorAction::setupFromString`,
+  `transferDefaultColors`, `updateObjectColors`): the exact sequence that refreshes the editor is
+  not documented; if colors only show up after reopening the level, this is the culprit.
+- **Vertical offset** between level coordinates and editor nodes: measured automatically on an
+  object (not hard-coded); only used to draw masks and the overlay.
+- **Touch priorities** of the toolbar and the mask tool in the editor.
+- **Visibility of hidden layers**: reapplied after every `updateVisibility` of the editor.
+- **Catalog check at startup**: creates every catalog object and reads its type; if more than a
+  third of the checks fail (unreliable field read), the check is skipped.
 
-## Sécurité du gameplay : ce qui est garanti, ce qui ne l'est pas
+## Gameplay safety: what is guaranteed, what is not
 
-Garanti (vérifié par les tests) :
-- aucun objet non généré n'est modifié, déplacé ou supprimé : comparaison complète avant/après de
-  chaque opération, annulation automatique en cas de différence ;
-- seuls des objets du catalogue, vérifiés comme décoration (pas de hitbox, pas trigger/portail/orbe/pad),
-  sont créés, sans propriété autre que position/rotation/échelle/couleur/Z/groupe-tag ;
-- aucun objet dessiné au-dessus des obstacles ne recouvre un obstacle.
+Guaranteed (verified by the tests):
+- no non-generated object is ever modified, moved or removed: full before/after comparison of
+  every operation, automatic rollback on any difference;
+- only catalog objects verified as decorations (no hitbox, not a trigger/portal/orb/pad) are
+  created, with no property other than position/rotation/scale/color/Z/tag group;
+- nothing drawn above the hazards covers a hazard.
 
-Non garanti :
-- **les trajectoires ne sont pas simulées** : la lisibilité repose sur des règles prudentes (marges
-  autour des obstacles, réduction dans les couloirs serrés, ordre d'affichage, pas de premier plan près
-  du gameplay) ;
-- la lisibilité dépend aussi des couleurs choisies : l'harmoniseur avertit si le remplissage et les
-  contours, ou le remplissage et le fond, sont trop proches, mais ne corrige pas les couleurs.
+Not guaranteed:
+- **trajectories are not simulated**: readability relies on conservative rules (margins around
+  hazards, reduction in tight corridors, draw order, no foreground near the gameplay);
+- readability also depends on the chosen colors: the harmonizer warns when fill and outlines, or
+  fill and background, are too close, but does not fix the colors.
 
-## Analyse
+## Analysis
 
-- Grille d'analyse au demi-bloc (15 unités) : les objets plus fins sont approximés.
-- Pentes : rastérisées en escalier pour l'analyse ; le contour suit l'hypoténuse, mais le remplissage
-  ne couvre pas les cellules de pente (le sprite de la pente reste visible).
-- Objets déplacés / activés par des triggers (groupes ciblés par un trigger), cachés ou *no-touch* :
-  jamais décorés (une décoration statique resterait en place quand la plateforme bouge, ou révélerait
-  un chemin caché). Une option « hériter des groupes de déplacement » reste à faire.
-- Les valeurs par défaut de Z layer des objets ne sont pas dans les données extraites : dans le jeu
-  elles sont lues sur les objets ; hors-jeu (CLI, rendu), on suppose B2 pour les blocs et obstacles.
+- Half-block analysis grid (15 units): thinner objects are approximated.
+- Slopes: rasterized as stairs for the analysis; the outline follows the hypotenuse, but the fill
+  does not cover slope cells (the slope sprite stays visible).
+- Objects moved / toggled by triggers (groups targeted by a trigger), hidden or *no-touch*: never
+  decorated (a static decoration would stay in place while the platform moves, or would reveal a
+  hidden path). An "inherit movement groups" option is still to do.
+- Objects' default Z layers are not in the extracted data: in the game they are read from the
+  objects; offline (CLI, renderer), B2 is assumed for blocks and hazards.
 
-## Interface
+## UI
 
-- Une fenêtre à onglets (modale) + une barre d'outils permanente : le dessin de masques et la
-  prévisualisation se font fenêtre fermée. Le style d'interface utilise les sprites du jeu.
-- Import de preset : copier le `.json` dans le dossier des presets (bouton « Open presets folder »).
+- One tabbed (modal) window + a permanent toolbar: mask drawing and preview happen with the window
+  closed. The UI style uses the game's sprites.
+- Preset import: copy the `.json` into the presets folder ("Open presets folder" button).
 
-## Rendu hors-jeu
+## Offline renderer
 
-`tools/render/render.py` approxime le rendu du jeu (pas de shaders, pulses, animations, sprites de
-glow automatiques des blocs, effets de caméra). Il sert à juger la composition et l'alignement, pas
-à reproduire le jeu au pixel près.
+`tools/render/render.py` approximates the game's rendering (no shaders, pulses, animations,
+automatic block glow sprites, camera effects). It is meant to judge composition and alignment, not
+to reproduce the game pixel for pixel.

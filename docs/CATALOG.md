@@ -1,32 +1,31 @@
-# Catalogue d'objets : provenance des données
+# Object catalog: where the data comes from
 
-Les tables du moteur ne viennent pas de listes communautaires : elles ont été extraites du jeu
-installé (GD 2.2091, `GeometryDash.exe` du 17/10/2026), **en lecture seule**, par analyse statique.
+The engine's tables do not come from community lists: they were extracted from the installed game
+(GD 2.2091, `GeometryDash.exe` of 2026-10-17), **read-only**, through static analysis.
 
-| Donnée | Méthode |
+| Data | Method |
 |---|---|
-| ID → sprite (4 093 objets) | décodage des 4 094 insertions de `ObjectToolbox::init` |
-| Classe C++ de chaque objet | émulation de `GameObject::createWithKey` + informations RTTI |
-| Type (solide, obstacle, décoration, trigger, portail...) et hitbox | émulation du `customSetup` de chaque classe (constantes du binaire : spike 0,2×0,4 → 6×12, rayons des scies 32,3 / 21,6 / 11,925, orbes ×1,2) |
-| Taille visible et décalage des sprites | planches `-uhd.plist` (4 px = 1 unité, vérifié : `square_01` = 120 px = 30 unités) |
-| Orientation canonique des sprites (coins, glows, lignes) | mesure des pixels des planches du jeu (`tools/catalog/gen_catalog.py`) |
+| ID → sprite (4,093 objects) | decoding the 4,094 insertions of `ObjectToolbox::init` |
+| C++ class of each object | emulation of `GameObject::createWithKey` + RTTI information |
+| Type (solid, hazard, decoration, trigger, portal...) and hitbox | emulation of each class's `customSetup` (constants from the binary: spike 0.2×0.4 → 6×12, saw radii 32.3 / 21.6 / 11.925, orbs ×1.2) |
+| Visible size and sprite offset | `-uhd.plist` sheets (4 px = 1 unit, checked: `square_01` = 120 px = 30 units) |
+| Canonical sprite orientation (corners, glows, lines) | pixel measurements on the game's sprite sheets (`tools/catalog/gen_catalog.py`) |
 
-Fichiers générés : `core/src/generated/ObjectTableData.inc` (table de gameplay),
-`core/src/generated/DecoCatalogData.inc` (61 objets choisis avec forme et rôle + 3 360 décorations
-natives statiques pour la bibliothèque), `tools/data/*.json` (rendu hors-jeu).
+Generated files: `core/src/generated/ObjectTableData.inc` (gameplay table),
+`core/src/generated/DecoCatalogData.inc` (61 curated objects with shape and role + 3,360 static
+native decorations for the library), `tools/data/*.json` (offline renderer).
 
-Règles de sécurité : seuls les objets de type *Decoration* sans hitbox, de classe `GameObject`
-(statique) ou `EnhancedGameObject` (marqués « animated », jamais utilisés par défaut) sont dans le
-catalogue. Les objets de type portail/trigger/texte classés « décoration » par le jeu (sorties de
-téléporteur, textes) sont exclus. Dans le jeu, chaque objet choisi est en plus recréé une fois au
-démarrage et désactivé s'il ne se comporte pas comme une décoration.
+Safety rules: only *Decoration*-type objects without a hitbox, of class `GameObject` (static) or
+`EnhancedGameObject` (flagged "animated", never used by default) are in the catalog. Portal /
+trigger / text objects that the game classifies as "decoration" (teleporter exits, texts) are
+excluded. In the game, every chosen object is additionally created once at startup and disabled if
+it does not behave like a decoration.
 
-Données extraites : `tools/catalog/data/` (`object_types.json`, `frames_uhd.json`,
-`deco_candidates.json`). Scripts d'extraction (désassemblage / émulation, lecture seule de l'exe) :
+Extracted data: `tools/catalog/data/` (`object_types.json`, `frames_uhd.json`,
+`deco_candidates.json`). Extraction scripts (disassembly / emulation, read-only access to the exe):
 `tools/catalog/extract/`.
 
-Pour régénérer les tables C++ (par exemple après avoir réextrait les données pour une nouvelle
-version de GD) :
+To regenerate the C++ tables (for example after re-extracting the data for a new GD version):
 
 ```powershell
 python tools/catalog/gen_catalog.py --objdata tools/catalog/data --resources "<GD>\Resources" --root .

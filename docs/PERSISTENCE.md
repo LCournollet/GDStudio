@@ -1,55 +1,55 @@
-# Persistance, copie et partage
+# Persistence, copying and sharing
 
-## Ce qui est stocké où
+## What is stored where
 
-| Donnée | Emplacement |
+| Data | Location |
 |---|---|
-| Décoration générée | **Dans le niveau**, sous forme d'objets natifs GD |
-| Appartenance d'un objet à une couche | Dans le niveau : chaque objet généré porte **un seul groupe en plus**, le *groupe-tag* de sa couche (ID élevé, choisi parmi ceux qu'aucun objet ni trigger du niveau n'utilise) |
-| Couleurs de la décoration | Dans le niveau : canaux de couleur alloués par le studio (de 999 vers le bas, jamais un canal utilisé par le niveau) |
-| Couches, palette, masques, paramètres, seeds, registre des objets, journal des opérations | Fichier projet JSON : `<save geode>/toyger.gd-decoration-studio/projects/<nom>-<n>.json` |
-| Presets utilisateur | `<config geode>/toyger.gd-decoration-studio/presets/*.json` (export / import = ces fichiers) |
-| Favoris, collections | données sauvegardées du mod (globales) |
+| Generated decoration | **In the level**, as native GD objects |
+| Which layer an object belongs to | In the level: every generated object carries **one extra group**, its layer's *tag group* (a high ID, chosen among those no object or trigger of the level uses) |
+| Decoration colors | In the level: color channels allocated by the studio (from 999 downwards, never a channel the level uses) |
+| Layers, palette, masks, settings, seeds, object registry, operation log | JSON project file: `<geode save>/toyger.gd-decoration-studio/projects/<name>-<n>.json` |
+| User presets | `<geode config>/toyger.gd-decoration-studio/presets/*.json` (export / import = these files) |
+| Favorites, collections | the mod's saved data (global) |
 
-Le niveau ne dépend **jamais** du fichier projet pour s'afficher : sans le mod, c'est un niveau
-normal. Le projet sert uniquement à l'édition avancée et à la régénération.
+The level **never** depends on the project file to display: without the mod it is a normal level.
+The project is only used for advanced editing and regeneration.
 
-## Réconciliation à l'ouverture
+## Reconciliation when the editor opens
 
-Chaque enregistrement du registre garde l'empreinte exacte (forme canonique) de l'objet créé.
-À l'ouverture de l'éditeur :
+Every registry record keeps the exact fingerprint (canonical form) of the object it created.
+When the editor opens:
 
-1. empreinte identique → objet **lié** ;
-2. objet portant un groupe-tag sans empreinte identique → **modifié à la main** (rattaché à
-   l'enregistrement le plus proche de la même couche et du même ID) ;
-3. enregistrement sans objet → **supprimé à la main** (ou annulé avec l'undo de GD) ; il est retiré ;
-4. objet portant un groupe-tag sans enregistrement → **récupéré** dans sa couche.
+1. identical fingerprint → object **linked**;
+2. object carrying a tag group without an identical fingerprint → **edited by hand** (attached to
+   the closest record of the same layer and the same ID);
+3. record without an object → **deleted by hand** (or undone with GD's undo); the record is removed;
+4. object carrying a tag group without a record → **recovered** into its layer.
 
-Le cas 4 rend le système robuste même si le fichier projet est perdu : l'appartenance aux couches
-se reconstruit à partir des groupes-tags.
+Case 4 keeps the system robust even if the project file is lost: layer membership is rebuilt from
+the tag groups.
 
-## Choix du fichier projet
+## Choosing the project file
 
-Les niveaux locaux n'ont pas d'identifiant stable (`m_levelID` vaut 0 avant upload) et plusieurs
-niveaux peuvent porter le même nom (c'est le cas dans ta sauvegarde : deux « Cataclysm 2 »).
-Le studio examine tous les fichiers projet de ce nom et choisit celui dont les objets sont présents
-dans le niveau (score de recouvrement). Sinon il crée un nouveau fichier (`-2`, `-3`...).
+Local levels have no stable identifier (`m_levelID` is 0 before upload) and several levels can
+share the same name (a save file can easily contain two copies of the same level). The studio looks
+at every project file with that name and picks the one whose objects are present in the level
+(overlap score). Otherwise it creates a new file (`-2`, `-3`...).
 
-## Copie, partage, ouverture sans le mod
+## Copying, sharing, opening without the mod
 
-| Situation | Conséquence |
+| Situation | Consequence |
 |---|---|
-| Ouverture sans le mod | Le niveau s'affiche normalement ; les groupes-tags sont inertes (aucun trigger ne les cible) |
-| Upload / partage | Idem ; le fichier projet reste local |
-| Copie du niveau dans GD | La copie porte les mêmes objets : elle est reconnue (même score) ; tant que les deux niveaux ne divergent pas, ils partagent un projet. Après divergence, la réconciliation rattache à chacun ses objets ; les métadonnées détaillées (clés de placement) d'un objet peuvent être perdues pour l'un des deux, l'appartenance aux couches reste correcte grâce aux groupes-tags |
-| Copier/coller d'objets générés | Les copies portent le groupe-tag : elles sont récupérées dans la couche d'origine à la prochaine réconciliation |
-| Le niveau se met à utiliser un groupe-tag | Le studio s'en aperçoit (objet non généré portant ce groupe) et donne un nouveau groupe-tag à la couche |
-| Option « groupes-tags » désactivée | Plus aucun groupe ajouté ; la détection des retouches manuelles n'est alors plus possible (seules les empreintes exactes sont reconnues) |
+| Opened without the mod | The level displays normally; tag groups are inert (no trigger targets them) |
+| Upload / sharing | Same; the project file stays local |
+| Level copied in GD | The copy carries the same objects: it is recognized (same score); as long as the two levels do not diverge, they share a project. After they diverge, reconciliation attaches each level's objects to it; an object's detailed metadata (placement keys) may be lost for one of the two, but layer membership stays correct thanks to the tag groups |
+| Copy/paste of generated objects | Copies carry the tag group: they are recovered into the original layer at the next reconciliation |
+| The level starts using a tag group | The studio notices it (a non-generated object carrying that group) and gives the layer a new tag group |
+| "Tag groups" option disabled | No group is added anymore; detecting manual edits is then impossible (only exact fingerprints are recognized) |
 
-## Historique
+## History
 
-Le studio a son propre historique (Undo / Redo / Restaurer la configuration). Les objets sont créés
-sans entrée dans l'undo de GD : un Ctrl+Z dans GD n'annule donc pas une génération (mais si
-l'utilisateur supprime des objets générés à la main, c'est détecté). Une prévisualisation en cours
-est annulée automatiquement avant chaque sauvegarde du niveau, les couches masquées sont
-réaffichées pendant la sauvegarde : le fichier du niveau ne contient jamais d'objets de prévisualisation.
+The studio has its own history (Undo / Redo / Restore configuration). Objects are created without
+an entry in GD's undo stack: Ctrl+Z in GD does not undo a generation (but if the user deletes
+generated objects by hand, that is detected). A pending preview is cancelled automatically before
+every level save, and hidden layers are shown again during the save: the level file never contains
+preview objects.
